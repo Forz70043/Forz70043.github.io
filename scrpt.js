@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function()
 			var stories = ["Welcome I'm Alfonso","or better, I'm Alfonso's web server.","Here you will find his portfolio of small personal projects","and his curriculum vitae.","Thank you for being here. "];
 			break;
 		case "it-IT":
-		case: "it":
+		case "it":
 			var stories = var stories = ["Benvenuto, sono Alfonso","o meglio, sono il suo web server.","Qui potrai trovare il suo portfolio con i progetti personali","ed il suo curriculum vitae.","Grazie per essere passato di qui. "];
 			break;
 		case "ru-RU":
