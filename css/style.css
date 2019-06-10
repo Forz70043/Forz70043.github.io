@@ -1,0 +1,87 @@
+/* initial style shit! */
+* {
+  box-sizing: border-box;
+}
+
+body {
+    background-color: grey;
+    text-align: center;
+    padding-top: 10em;
+}
+
+/* Container for columns and the top "toolbar" */
+.rows {
+  padding: 10px;
+  background: #f1f1f1;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+/* Clear floats after the columns */
+.rows:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The browser window */
+.container {
+	margin: 10%;
+	border: 3px solid #f1f1f1;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+}
+
+/* Create three unequal columns that floats next to each other */
+.columns {
+  float: left;
+}
+.left {
+  width: 15%;
+}
+.right {
+  width: 10%;
+}
+.middle {
+  width: 75%;
+}
+/* Three dots */
+.dot {
+  margin-top: 4px;
+  height: 12px;
+  width: 12px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Page content */
+.content {
+  padding: 10px;
+  background-color: #153131;
+}
+
+/* custom */
+label {
+	font-size: 25px;
+	text-align: left;
+}
+.shell{
+	text-align: left;
+}
+#typeWriter{
+	font-size: 30px;
+	font-family: : "Roboto";
+}
+.usr{
+	color: lime;/*#45cb85;*/
+}
+.path{
+	color: /*blue;*/#3983f9;
+}
+.labelWhite{
+	color:white;
+}
+
