@@ -5,7 +5,7 @@
 
 body {
     background-color: grey;
-    text-align: center;
+    /*text-align: center;*/
     padding-top: 10em;
 }
 
@@ -30,8 +30,8 @@ body {
 	border: 3px solid #f1f1f1;
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
-	border-bottom-left-radius: 15px;
-	border-bottom-right-radius: 15px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
 }
 
 /* Create three unequal columns that floats next to each other */
@@ -47,6 +47,7 @@ body {
 .middle {
   width: 75%;
 }
+
 /* Three dots */
 .dot {
   margin-top: 4px;
@@ -65,22 +66,27 @@ body {
 
 /* custom */
 label {
-	font-size: 25px;
+	font-size: 20px;
 	text-align: left;
 }
+
 .shell{
 	text-align: left;
 }
+
 #typeWriter{
-	font-size: 30px;
-	font-family: : "Roboto";
+	font-size: 20px;
+	font-family: : 'Roboto', sans-serif;
 }
+
 .usr{
 	color: lime;/*#45cb85;*/
 }
+
 .path{
 	color: /*blue;*/#3983f9;
 }
+
 .labelWhite{
 	color:white;
 }
