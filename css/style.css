@@ -1,12 +1,10 @@
 /* initial style shit! */
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
-    background-color: grey;
-    /*text-align: center;*/
-    padding-top: 10em;
+  background-color: grey;
+  /*text-align: center;*/
+  padding-top: 10em;
 }
 
 /* Container for columns and the top "toolbar" */
@@ -35,18 +33,10 @@ body {
 }
 
 /* Create three unequal columns that floats next to each other */
-.columns {
-  float: left;
-}
-.left {
-  width: 15%;
-}
-.right {
-  width: 10%;
-}
-.middle {
-  width: 75%;
-}
+.columns { float: left; }
+.left { width: 15%; }
+.right { width: 10%; }
+.middle { width: 75%; }
 
 /* Three dots */
 .dot {
@@ -79,15 +69,26 @@ label {
 	font-family: : 'Roboto', sans-serif;
 }
 
-.usr{
-	color: lime;/*#45cb85;*/
-}
+.usr{ color: lime;/*#45cb85;*/ }
+.path{ color: /*blue;*/#3983f9; }
+.labelWhite{ color:white; }
 
-.path{
-	color: /*blue;*/#3983f9;
-}
+.dot.red { background:#ED594A; }
+.dot.yellow { background:#FDD800; }
+.dot.green { background:#5AC05A; }
 
-.labelWhite{
-	color:white;
+/*
+FOR SCREEN THAT ARE 992 OR LESS
+*/
+@media screen and (max-width:992px){
+  .container { 
+    margin-left: 20%;
+    margin-right: 20%; 
+  }
 }
-
+/*
+  FOR SCREEN THAT'RE 600 WIDE OR LESS 
+*/
+@media screen and (max-width:600px ){
+  
+}
