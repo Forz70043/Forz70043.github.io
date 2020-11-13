@@ -64,6 +64,10 @@ label {
 	text-align: left;
 }
 
+label#typeWriter {
+  display: inline-flex;
+}
+
 #typeWriter{
 	font-size: 20px;
 	font-family: : 'Roboto', sans-serif;
