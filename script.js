@@ -1,15 +1,11 @@
 
 $(document).ready(function() {
-    console.log("jQuery ready");
+    //console.log("jQuery ready");
     var storiesIndex=0;
-    var index =0;
-    //var index=0;
     var typeWriter=document.getElementById('typeWriter');
     typeWriter.style.color="white";
     var stories=getStoriesLanguage();
     writeStories(stories,storiesIndex);
-
-
 });
 
 	function writeStories(stories,storiesIndex)
@@ -21,14 +17,17 @@ $(document).ready(function() {
             typeWriter.innerHTML = typeWriter.innerHTML + word[index];
             index++;
     		if(index===word.length) {
-        		clearInterval(adder);
+                clearInterval(adder);
+                if(storiesIndex == stories.length-1){
+                    //console.log("VIEWpROJECT");
+                    viewProject();
+                }
         		if(storiesIndex !== stories.length-1) {
             		//setInterval(function(){ typeWriter.innerHTML = ''; },1000);
             		deleteStories(stories,storiesIndex);
-            		//viewProject();
         		}
-    		}
-    	}, 200);
+            }
+        }, 120);
     }
 
 	function deleteStories(stories,storiesIndex,del=false)
@@ -53,26 +52,28 @@ $(document).ready(function() {
     }
 
 	function viewProject(){
-        console.log("viewProject");
+        //console.log("viewProject");
+        if($('#linkbox').hasClass('d-none')) $('#linkbox').removeClass('d-none');
     }
 
     function getStoriesLanguage(){
         var userLang = navigator.language || navigator.userLanguage;
-        var color = ["white"];
 
         switch(userLang.slice(0,2)){
             case "en-US":
             case "en-GB":
             case "en":
-                var stories = ["Welcome I'm Alfonso","or better, I'm Alfonso's web server.","Here you will find his portfolio of small personal projects","and his curriculum vitae.","Thank you for being here. &hearts; "];
+                var stories = ["Welcome I'm Alfonso !","This's my digital garden,","a compendium of the things I've created","and learned over the years.","Thank you for being here. ❤ "];
                 break;
             case "it-IT":
             case "it":
-                var stories = ["Benvenuto, sono Alfonso","o meglio, sono il suo web server.","Qui potrai trovare il suo portfolio con i progetti personali","ed il suo curriculum vitae.","Grazie per essere passato di qui. &hearts;"];
+                //var stories = ["Benvenuto, sono Alfonso","o meglio, sono il suo web server.","Qui potrai trovare il suo portfolio con i progetti personali","ed il suo curriculum vitae.","Grazie per essere passato di qui. &hearts;"];
+                //var stories = ["Ciao, sono Alfonso !","Qui puoi trovare progetti personali,","semplici tutorial, wiki","ed il mio curriculum vitae.","Grazie per essere passato di qui. ❤ "];
+                var stories = ["Ciao, sono Alfonso !","Questo è il mio giardino digitale,","un compendio di ciò che ho creato"," ed imparato nel corso degli anni.",/*"ed il mio curriculum vitae.",*/"Grazie per essere passato di qui. ❤ "];
                 break;
             case "ru-RU":
             case "ru":
-                var stories = ["Добро пожаловать, я Альфонсо или, вернее, я веб-сервер Альфонсо. Здесь вы найдете его портфолио небольших личных проектов и его биографические данные. Спасибо за то, что вы здесь. Dobro pozhalovat', ya Al'fonso ili, verneye, ya veb-server Al'fonso. Zdes' vy naydete yego portfolio nebol'shikh lichnykh proyektov i yego biograficheskiye dannyye. Spasibo za to, chto vy zdes'. &hearts;"];
+                //var stories = ["Добро пожаловать, я Альфонсо или, вернее, я веб-сервер Альфонсо. Здесь вы найдете его портфолио небольших личных проектов и его биографические данные. Спасибо за то, что вы здесь. Dobro pozhalovat', ya Al'fonso ili, verneye, ya veb-server Al'fonso. Zdes' vy naydete yego portfolio nebol'shikh lichnykh proyektov i yego biograficheskiye dannyye. Spasibo za to, chto vy zdes'. &hearts;"];
                 break;
         }
         return stories;
