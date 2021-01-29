@@ -1,8 +1,8 @@
-/* initial style shit! */
+/* initial style */
 * { box-sizing: border-box; }
 
 body {
-  background-color: grey;
+  background-color: /*#153131;*/ #121212;
   /*text-align: center;*/
   padding-top: 10em;
 }
@@ -24,12 +24,13 @@ body {
 
 /* The browser window */
 .container {
-	margin: 10%;
-	border: 3px solid #f1f1f1;
+  margin: 2% auto;
+  text-align: center;
+	/*border: 3px solid #f1f1f1;*/
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
 	border-bottom-left-radius: 10px;
-	border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 /* Create three unequal columns that floats next to each other */
@@ -70,7 +71,7 @@ label#typeWriter {
 
 #typeWriter{
 	font-size: 20px;
-	font-family: : 'Roboto', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 .usr{ color: lime;/*#45cb85;*/ }
