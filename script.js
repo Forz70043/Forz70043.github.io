@@ -1,9 +1,15 @@
 
 $(document).ready(function() {
-    //console.log("jQuery ready");
+
+    if (window.matchMedia('(prefers-color-scheme)').media !== 'not all') {
+        console.log('🎉 Dark mode is supported');
+        var lightMode = window.matchMedia('(prefers-color-scheme: light)').matches;
+        console.log(lightMode);
+    }
+    
     var storiesIndex=0;
     var typeWriter=document.getElementById('typeWriter');
-    typeWriter.style.color="white";
+    //typeWriter.style.color="white";
     var stories=getStoriesLanguage();
     writeStories(stories,storiesIndex);
 });
@@ -27,7 +33,7 @@ $(document).ready(function() {
             		deleteStories(stories,storiesIndex);
         		}
             }
-        }, 120);
+        }, 50);
     }
 
 	function deleteStories(stories,storiesIndex,del=false)

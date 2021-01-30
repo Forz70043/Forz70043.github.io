@@ -3,66 +3,19 @@
 
 body {
   background-color: /*#153131;*/ #121212;
-  /*text-align: center;*/
   padding-top: 10em;
+  display: flex;
+  flex-flow: column;
+  min-height: 92vh;
 }
 
-/* Container for columns and the top "toolbar" */
-.rows {
-  padding: 10px;
-  background: #f1f1f1;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
+.footer {
+  height: 50px;
+  margin-top: auto;
 }
 
-/* Clear floats after the columns */
-.rows:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* The browser window */
-.container {
-  margin: 2% auto;
-  text-align: center;
-	/*border: 3px solid #f1f1f1;*/
-	border-top-left-radius: 15px;
-	border-top-right-radius: 15px;
-	border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-/* Create three unequal columns that floats next to each other */
-.columns { float: left; }
-.left { width: 15%; }
-.right { width: 10%; }
-.middle { width: 75%; }
-
-/* Three dots */
-.dot {
-  margin-top: 4px;
-  height: 12px;
-  width: 12px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-/* Page content */
-.content {
-  padding: 10px;
-  background-color: #153131;
-}
-
-/* custom */
-label {
-	font-size: 20px;
-	text-align: left;
-}
-
-.shell{
-	text-align: left;
+#cp {
+  color: white;
 }
 
 label#typeWriter {
@@ -71,29 +24,26 @@ label#typeWriter {
 
 #typeWriter{
 	font-size: 20px;
-	font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  color: white;
 }
 
-.usr{ color: lime;/*#45cb85;*/ }
-.path{ color: /*blue;*/#3983f9; }
-.labelWhite{ color:white; }
-
-.dot.red { background:#ED594A; }
-.dot.yellow { background:#FDD800; }
-.dot.green { background:#5AC05A; }
-
-/*
-FOR SCREEN THAT ARE 992 OR LESS
-*/
-@media screen and (max-width:992px){
-  .container { 
-    margin-left: 20%;
-    margin-right: 20%; 
+@media(prefers-color-scheme: light) {
+  body {
+    background-color: white;
+    color: black;
   }
-}
-/*
-  FOR SCREEN THAT'RE 600 WIDE OR LESS 
-*/
-@media screen and (max-width:600px ){
-  
+  .btn-outline-light {
+    color:black;
+    border-color: black;
+  }
+  .btn-outline-light:hover {
+    border-color: #BE1622;
+  }
+  #cp {
+    color: black;
+  }
+  #typeWriter {
+    color:black;
+  }
 }
