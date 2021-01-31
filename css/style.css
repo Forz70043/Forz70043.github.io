@@ -1,12 +1,25 @@
+:root {
+  color-scheme: light dark;
+}
+
 /* initial style */
 * { box-sizing: border-box; }
 
 body {
-  background-color: /*#153131;*/ #121212;
   padding-top: 10em;
   display: flex;
   flex-flow: column;
   min-height: 92vh;
+  background-color: var(--background-color);
+}
+
+label {
+  color: var(--black);
+}
+
+.btn-outline-light {
+  color:var(--color);
+  border-color: var(--color);
 }
 
 .footer {
@@ -15,7 +28,7 @@ body {
 }
 
 #cp {
-  color: white;
+  color: var(--color);
 }
 
 label#typeWriter {
@@ -25,13 +38,36 @@ label#typeWriter {
 #typeWriter{
 	font-size: 20px;
   font-family: 'Roboto', sans-serif;
-  color: white;
+  color: var(--color);
 }
 
+.btn-outline-light:hover {
+  border-color: var(--outlined);
+}
+
+.app-sun {
+  background-image: url("/libs/image/sun.png");
+}
+.app-moon {
+  background-image: url("/libs/image/moon.png");
+}
+/***************************************/
+
+
+/***************************************
+@media(prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: white;
+  }
+  #typeWriter {
+    color:white;
+  }
+}
 @media(prefers-color-scheme: light) {
   body {
     background-color: white;
-    color: black;
+    color: #121212;
   }
   .btn-outline-light {
     color:black;
@@ -47,3 +83,4 @@ label#typeWriter {
     color:black;
   }
 }
+*/

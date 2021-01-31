@@ -3,8 +3,15 @@ $(document).ready(function() {
 
     if (window.matchMedia('(prefers-color-scheme)').media !== 'not all') {
         console.log('🎉 Dark mode is supported');
-        var lightMode = window.matchMedia('(prefers-color-scheme: light)').matches;
-        console.log(lightMode);
+        const lightMode = window.matchMedia('(prefers-color-scheme: light)').matches;
+        
+        console.log(`Dark mode is ${lightMode ? '☀️ off' : '🌒 on'}`);
+        let currentTheme = localStorage.getItem("theme");
+        console.log(currentTheme);
+        if(currentTheme==null){
+            localStorage.setItem("theme", lightMode ? 'light' : 'dark');
+        }
+        console.log(localStorage.getItem("theme"));
     }
     
     var storiesIndex=0;
@@ -12,7 +19,27 @@ $(document).ready(function() {
     //typeWriter.style.color="white";
     var stories=getStoriesLanguage();
     writeStories(stories,storiesIndex);
+
+    if ("serviceWorker" in navigator) {
+        console.log("serv work");
+        window.addEventListener("load", function() {
+          navigator.serviceWorker
+            .register("/serviceWorker.js")
+            .then(res => console.log("service worker registered"))
+            .catch(err => console.log("service worker not registered", err))
+        })
+    }else console.log("serv don't work");
+
 });
+    function switchTheme(e){
+        console.log(e);
+        let currentTheme = localStorage.getItem("theme");
+        if(currentTheme=='light') newTheme='dark';
+        else newTheme='light';
+
+
+        localStorage.setItem("theme",newTheme);
+    }
 
 	function writeStories(stories,storiesIndex)
     {
@@ -58,7 +85,6 @@ $(document).ready(function() {
     }
 
 	function viewProject(){
-        //console.log("viewProject");
         if($('#linkbox').hasClass('d-none')) $('#linkbox').removeClass('d-none');
     }
 
@@ -69,17 +95,13 @@ $(document).ready(function() {
             case "en-US":
             case "en-GB":
             case "en":
-                var stories = ["Welcome I'm Alfonso !","This's my digital garden,","a compendium of the things I've created","and learned over the years.","Thank you for being here. ❤ "];
+                var stories = ["Hi, I'm Alfonso !","This's my digital garden,","a compendium of the things I've created","and learned over the years.","Thank you for being here. ❤ "];
                 break;
             case "it-IT":
             case "it":
                 //var stories = ["Benvenuto, sono Alfonso","o meglio, sono il suo web server.","Qui potrai trovare il suo portfolio con i progetti personali","ed il suo curriculum vitae.","Grazie per essere passato di qui. &hearts;"];
                 //var stories = ["Ciao, sono Alfonso !","Qui puoi trovare progetti personali,","semplici tutorial, wiki","ed il mio curriculum vitae.","Grazie per essere passato di qui. ❤ "];
                 var stories = ["Ciao, sono Alfonso !","Questo è il mio giardino digitale,","un compendio di ciò che ho creato"," ed imparato nel corso degli anni.",/*"ed il mio curriculum vitae.",*/"Grazie per essere passato di qui. ❤ "];
-                break;
-            case "ru-RU":
-            case "ru":
-                //var stories = ["Добро пожаловать, я Альфонсо или, вернее, я веб-сервер Альфонсо. Здесь вы найдете его портфолио небольших личных проектов и его биографические данные. Спасибо за то, что вы здесь. Dobro pozhalovat', ya Al'fonso ili, verneye, ya veb-server Al'fonso. Zdes' vy naydete yego portfolio nebol'shikh lichnykh proyektov i yego biograficheskiye dannyye. Spasibo za to, chto vy zdes'. &hearts;"];
                 break;
         }
         return stories;
