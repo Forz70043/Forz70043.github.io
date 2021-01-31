@@ -1,0 +1,13 @@
+{
+    "name": "Alfonso Pisicchio",
+    "short_name": "Alfonso",
+    "start_url": "",
+    "display": "fullscreen",
+    "background_color": "#050505",
+    "description": "Simple Portfolio",
+    "icons": [{
+        "src": "libs/image/AP-dev1.png",
+        "size": "567x567",
+        "type": "image/png"
+    }]
+  }
