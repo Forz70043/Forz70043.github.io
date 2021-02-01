@@ -4,6 +4,7 @@
     "start_url": "index.html",
     "display": "fullscreen",
     "background_color": "#050505",
+    "theme-color": "#BE1622",
     "description": "Simple Portfolio",
     "icons": [{
         "src": "libs/image/AP-dev1.png",
