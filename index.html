@@ -12,6 +12,7 @@
 	<meta name="author" content="Alfonso Pisicchio">
 	<meta name="keywords" content="Alfonso Pisicchio, Sviluppatore, Developer, PHP, Bash, Javascript,">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="theme-color" content="#BE1622">
 	<meta name="color-scheme" content="light dark">
 	<title>Alfonso Pisicchio</title>	
 	<!-- for old devices -->
@@ -33,12 +34,12 @@
 	<!-- Windows  -->
 	<meta name="msapplication-navbutton-color" content="red">
 	<meta name="msapplication-TileColor" content="red">
-	<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
-	<meta name="msapplication-config" content="browserconfig.xml">
+	<!--<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+	<meta name="msapplication-config" content="browserconfig.xml">-->
 
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="libs/fontawesome/all.min.css">
 	
 	<link rel="stylesheet" href="css/dark.css" media="(prefers-color-scheme: dark)">
 	<link rel="stylesheet" href="css/light.css" media="(prefers-color-scheme: light)">
@@ -57,7 +58,7 @@
 
 	<div class="d-none" id="linkbox">
 		<div class="d-flex justify-content-center d-none">
-			<a href="https://github.com/Forz70043" title="GitHub" class="btn btn-outline-light ml-5"><span class="fa fa-github"></span></a>
+			<a href="https://github.com/Forz70043" title="GitHub" class="btn btn-outline-light ml-5"><span class="fab fa-github"></span></a>
 			<button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-outline-light ml-5"><span class="fa fa-address-card"></span></button>
 		</div>
 	</div>
@@ -79,10 +80,10 @@
 							<div class="row">
 								<div class="form-group col">
 									<button type="button" title="LinkedIn" class="btn btn-sm btn-primary rounded-circle" onclick="window.location.href='https://www.linkedin.com/in/alfonsopisicchio/'">
-										<span class="fa fa-linkedin"></span>
+										<span class="fab fa-linkedin-in"></span>
 									</button>&nbsp;
 									<button type="button" title="WhatsApp" class="btn btn-sm btn-success rounded-circle" onclick="window.location.href='https://wa.me/+393277180663'">
-										<span class="fa fa-whatsapp"></span>
+										<span class="fab fa-whatsapp"></span>
 									</button>
 								</div>
 							</div>
@@ -95,7 +96,7 @@
 						</div>
 						<div class="form-group col">
 							<label>CV</label><br/>
-							<a href="/document.pdf" class="btn btn-sm btn-info rounded-circle" target="_blank" title="Apri CV" alt="View CV"><span class="fa fa-file-pdf-o"></span></a>	
+							<a href="/document.pdf" class="btn btn-sm btn-info rounded-circle" target="_blank" title="Apri CV" alt="View CV"><span class="fas fa-file-pdf"></span></a>	
 						</div>
 					</div>	
 			</div>
@@ -110,13 +111,14 @@
 			<a class="primary" href="https://pisicchio.dev">pisicchio.dev</a>
 			<a href="https://www.iubenda.com/privacy-policy/77575408" class="iubenda-black iubenda-embed ml-3 mt-1" title="Privacy Policy ">Privacy Policy</a>
 			<script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
-			<dark-mode-toggle id="dark-mode-toggle-1" legend="" mode="dark" appearance="toggle" dark="Dark" light="Light" remember="Remember this"></dark-mode-toggle>
+			<dark-mode-toggle id="dark-mode-toggle-1" legend="" mode="dark" appearance="toggle" dark="light" light="dark" remember="Remember this"></dark-mode-toggle>
 		</div>
 	</footer>
 	<!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>-->
 	<script type="text/javascript" src="libs/jQueryv3.5.1.js"></script>
 	<script src="script.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+	<script src="libs/bootstrap/bootstrap.min.js"></script>
+	<script src="libs/fontawesome/all.min.js"
 	<script type="module" src="https://unpkg.com/dark-mode-toggle"></script>
 </body>
 <!-- Google Tag Manager (noscript) -->
