@@ -9,14 +9,17 @@
     "icons": [{
         "src": "libs/image/AP-dev1.png",
         "size": "567x567",
-        "type": "image/png"
+        "type": "image/png",
+        "purpose": "any"
     },{
         "src":"libs/image/ap-dev1_144x144.png",
         "size":"144x144",
-        "type":"image/png"
+        "type":"image/png",
+        "purpose": "any"
     },{
         "src":"libs/image/AP-dev1.png",
         "size":"514x514",
-        "type":"image/png"
+        "type":"image/png",
+        "purpose": "any"
     }]
   }
