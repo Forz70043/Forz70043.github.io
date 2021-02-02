@@ -1,7 +1,7 @@
 {
     "name": "Alfonso Pisicchio",
     "short_name": "Alfonso",
-    "start_url": "/index.html",
+    "start_url": "index.html",
     "display": "fullscreen",
     "background_color": "#050505",
     "theme_color": "#BE1622",
