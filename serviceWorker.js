@@ -21,6 +21,33 @@ const assets = [
 ]
 
 
+self.addEventListener('install',(e)=>{
+  console.log("SW install");
+  e.waitUntil(
+    caches.open(alfSite).then((cache) => {
+          console.log('[Service Worker] Caching all: app shell and content');
+      return cache.addAll(assets);
+    })
+  );
+});
+
+
+self.addEventListener('fetch', (e) => {
+  e.respondWith(
+    caches.match(e.request).then((r) => {
+          console.log('[Service Worker] Fetching resource: '+e.request.url);
+      return r || fetch(e.request).then((response) => {
+                return caches.open(alfSite).then((cache) => {
+          console.log('[Service Worker] Caching new resource: '+e.request.url);
+          cache.put(e.request, response.clone());
+          return response;
+        });
+      });
+    })
+  );
+});
+
+/*
 self.addEventListener("install", installEvent => {
     installEvent.waitUntil(
       caches.open(alfSite).then(cache => {
@@ -28,7 +55,9 @@ self.addEventListener("install", installEvent => {
       })
     )
 });
-  
+*/
+
+/*
 self.addEventListener("fetch", fetchEvent => {
     fetchEvent.respondWith(
       caches.match(fetchEvent.request).then(res => {
@@ -36,3 +65,4 @@ self.addEventListener("fetch", fetchEvent => {
       })
     )
 })
+*/
