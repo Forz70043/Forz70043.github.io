@@ -7,8 +7,13 @@ const assets = [
   "/css/style.css",
   "/script.js",
   "/serviceWorker.js",
-  "/libs/image/AP-dev1.png",
-  "/libs/image/ap-dev1_144x144-png",
+  "/libs/image/android-icon-36x36.png",
+  "/libs/image/android-icon-48x48.png",
+  "/libs/image/android-icon-72x72.png",
+  "/libs/image/android-icon-96x96.png",
+  "/libs/image/android-icon-144x144.png",
+  "/libs/image/android-icon-192x192.png",
+  "/libs/image/icon-512x512.png",
   "/libs/image/moon.png",
   "/libs/image/sun.png",
   "/libs/bootstrap/bootstrap.min.css",
@@ -22,84 +27,72 @@ const assets = [
 
 
 // Installing Service Worker
-self.addEventListener('install', (e) => {
-  console.log('[Service Worker] Install');
-  e.waitUntil((async () => {
-    const cache = await caches.open(alfSite);
-    console.log('[Service Worker] Caching all: app shell and content');
-    await cache.addAll(assets);
-  })());
+self.addEventListener("install", function(e) {
+  console.log("Alloy service worker installation");
+  e.waitUntil(
+      caches.open(cacheName).then(function(cache) {
+          console.log("Alloy service worker caching dependencies");
+          initialCache.map(function(url) {
+              return cache.add(url).catch(function(reason) {
+                  return console.log(
+                      "Alloy: " + String(reason) + " " + url
+                  );
+              });
+          });
+      })
+  );
+});
+
+// Activating content using Service Worker
+self.addEventListener("activate", function(e) {
+  console.log("Alloy service worker activation");
+  e.waitUntil(
+      caches.keys().then(function(keyList) {
+          return Promise.all(
+              keyList.map(function(key) {
+                  if (key !== cacheName) {
+                      console.log("Alloy old cache removed", key);
+                      return caches.delete(key);
+                  }
+              })
+          );
+      })
+  );
+  return self.clients.claim();
 });
 
 // Fetching content using Service Worker
-self.addEventListener('fetch', (e) => {
-  e.respondWith((async () => {
-    const r = await caches.match(e.request);
-    console.log(`[Service Worker] Fetching resource: ${e.request.url}`);
-    if (r) return r;
-    const response = await fetch(e.request);
-    const cache = await caches.open(alfSite);
-    console.log(`[Service Worker] Caching new resource: ${e.request.url}`);
-    cache.put(e.request, response.clone());
-    return response;
-  })());
-});
+self.addEventListener("fetch", function(e) {
+  if (new URL(e.request.url).origin !== location.origin) return;
 
-let deferredPrompt;
+  if (e.request.mode === "navigate" && navigator.onLine) {
+      e.respondWith(
+          fetch(e.request).then(function(response) {
+              return caches.open(cacheName).then(function(cache) {
+                  cache.put(e.request, response.clone());
+                  return response;
+              });
+          })
+      );
+      return;
+  }
 
-window.addEventListener('beforeinstallprompt', (e) => {
-  // Prevent the mini-infobar from appearing on mobile
-  e.preventDefault();
-  // Stash the event so it can be triggered later.
-  deferredPrompt = e;
-  // Update UI notify the user they can install the PWA
-  showInstallPromotion();
-});
-
-
-/*
-self.addEventListener('install',(e)=>{
-  console.log("SW install");
-  e.waitUntil(
-    caches.open(alfSite).then((cache) => {
-          console.log('[Service Worker] Caching all: app shell and content');
-      return cache.addAll(assets);
-    })
-  );
-});
-
-
-self.addEventListener('fetch', (e) => {
   e.respondWith(
-    caches.match(e.request).then((r) => {
-          console.log('[Service Worker] Fetching resource: '+e.request.url);
-      return r || fetch(e.request).then((response) => {
-                return caches.open(alfSite).then((cache) => {
-          console.log('[Service Worker] Caching new resource: '+e.request.url);
-          cache.put(e.request, response.clone());
-          return response;
-        });
-      });
-    })
+      caches
+          .match(e.request)
+          .then(function(response) {
+              return (
+                  response ||
+                  fetch(e.request).then(function(response) {
+                      return caches.open(cacheName).then(function(cache) {
+                          cache.put(e.request, response.clone());
+                          return response;
+                      });
+                  })
+              );
+          })
+          .catch(function() {
+              return caches.match(offlinePage);
+          })
   );
 });
-*/
-/*
-self.addEventListener("install", installEvent => {
-    installEvent.waitUntil(
-      caches.open(alfSite).then(cache => {
-        cache.addAll(assets)
-      })
-    )
-});
-*/
-
-/*
-self.addEventListener("fetch", fetchEvent => {
-    fetchEvent.respondWith(
-      caches.match(fetchEvent.request).then(res => {
-        return res || fetch(fetchEvent.request)
-      })
-    )
-})
-*/
