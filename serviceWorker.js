@@ -1,5 +1,5 @@
-const alfSite = "alfonso-pisicchio-site-v2"
-const assets = [
+const cacheName = "alfonso-pisicchio-site-v2"
+const initialCache = [
   "/",
   "/index.html",
   "/css/dark.css",
@@ -24,7 +24,6 @@ const assets = [
   "/favicon.ico",
 
 ]
-
 
 // Installing Service Worker
 self.addEventListener("install", function(e) {
