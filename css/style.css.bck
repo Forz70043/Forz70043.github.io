@@ -1,0 +1,86 @@
+:root {
+  color-scheme: light dark;
+}
+
+/* initial style */
+* { box-sizing: border-box; }
+
+body {
+  padding-top: 10em;
+  display: flex;
+  flex-flow: column;
+  min-height: 92vh;
+  background-color: var(--background-color);
+}
+
+label {
+  color: var(--black);
+}
+
+.btn-outline-light {
+  color:var(--color);
+  border-color: var(--color);
+}
+
+.footer {
+  height: 50px;
+  margin-top: auto;
+}
+
+#cp {
+  color: var(--color);
+}
+
+label#typeWriter {
+  display: inline-flex;
+}
+
+#typeWriter{
+	font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  color: var(--color);
+}
+
+.btn-outline-light:hover {
+  border-color: var(--outlined);
+}
+
+.app-sun {
+  background-image: url("/libs/image/sun.png");
+}
+.app-moon {
+  background-image: url("/libs/image/moon.png");
+}
+/***************************************/
+
+
+/***************************************
+@media(prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: white;
+  }
+  #typeWriter {
+    color:white;
+  }
+}
+@media(prefers-color-scheme: light) {
+  body {
+    background-color: white;
+    color: #121212;
+  }
+  .btn-outline-light {
+    color:black;
+    border-color: black;
+  }
+  .btn-outline-light:hover {
+    border-color: #BE1622;
+  }
+  #cp {
+    color: black;
+  }
+  #typeWriter {
+    color:black;
+  }
+}
+*/
