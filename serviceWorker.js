@@ -16,6 +16,8 @@ const initialCache = [
   "/libs/image/icon-512x512.png",
   "/libs/image/moon.png",
   "/libs/image/sun.png",
+  "/libs/image/wip.gif",
+  "/libs/image/dynamicVH.png",
   "/libs/bootstrap/bootstrap.min.css",
   "/libs/bootstrap/bootstrap.min.js",
   "/libs/fontawesome/all.min.css",

@@ -1,7 +1,7 @@
 
 $(document).ready(function() {
 
-    if (window.matchMedia('(prefers-color-scheme)').media !== 'not all') {
+    /*if (window.matchMedia('(prefers-color-scheme)').media !== 'not all') {
         console.log('🎉 Dark mode is supported');
         const lightMode = window.matchMedia('(prefers-color-scheme: light)').matches;
         
@@ -12,13 +12,13 @@ $(document).ready(function() {
             localStorage.setItem("theme", lightMode ? 'light' : 'dark');
         }
         console.log(localStorage.getItem("theme"));
-    }
+    }*/
     
-    var storiesIndex=0;
-    var typeWriter=document.getElementById('typeWriter');
+    //var storiesIndex=0;
+    //var typeWriter=document.getElementById('typeWriter');
     //typeWriter.style.color="white";
-    var stories=getStoriesLanguage();
-    writeStories(stories,storiesIndex);
+    //var stories=getStoriesLanguage();
+    //writeStories(stories,storiesIndex);
 
     if ("serviceWorker" in navigator) {
         console.log("serv work");
@@ -30,6 +30,7 @@ $(document).ready(function() {
     }else console.log("serv don't work");
 
 });
+    /*
     function switchTheme(e){
         console.log(e);
         let currentTheme = localStorage.getItem("theme");
@@ -86,7 +87,8 @@ $(document).ready(function() {
 	function viewProject(){
         if($('#linkbox').hasClass('d-none')) $('#linkbox').removeClass('d-none');
     }
-
+    */
+   /*
     function getStoriesLanguage(){
         var userLang = navigator.language || navigator.userLanguage;
 
@@ -100,8 +102,9 @@ $(document).ready(function() {
             case "it":
                 //var stories = ["Benvenuto, sono Alfonso","o meglio, sono il suo web server.","Qui potrai trovare il suo portfolio con i progetti personali","ed il suo curriculum vitae.","Grazie per essere passato di qui. &hearts;"];
                 //var stories = ["Ciao, sono Alfonso !","Qui puoi trovare progetti personali,","semplici tutorial, wiki","ed il mio curriculum vitae.","Grazie per essere passato di qui. ❤ "];
-                var stories = ["Ciao, sono Alfonso !","Questo è il mio giardino digitale,","un compendio di ciò che ho creato"," ed imparato nel corso degli anni.",/*"ed il mio curriculum vitae.",*/"Grazie per essere passato di qui. ❤ "];
+                var stories = ["Ciao, sono Alfonso !","Questo è il mio giardino digitale,","un compendio di ciò che ho creato"," ed imparato nel corso degli anni.","Grazie per essere passato di qui. ❤ "];
                 break;
         }
         return stories;
     }
+    */
