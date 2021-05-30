@@ -1,4 +1,4 @@
-
+log("start");
 $(document).ready(function() {
 
     /*if (window.matchMedia('(prefers-color-scheme)').media !== 'not all') {
@@ -19,7 +19,7 @@ $(document).ready(function() {
     //typeWriter.style.color="white";
     //var stories=getStoriesLanguage();
     //writeStories(stories,storiesIndex);
-
+    console.log("doc ready");
     if ("serviceWorker" in navigator) {
         console.log("serv work");
         //window.addEventListener("load", function() {
@@ -27,7 +27,8 @@ $(document).ready(function() {
             .then(res => console.log("service worker registered"))
             .catch(err => console.log("service worker not registered", err))
         //})
-    }else console.log("serv don't work");
+    }
+    else console.log("serv don't work");
 
 });
     /*
