@@ -1,127 +1,177 @@
 <!DOCTYPE html>
-<html lang="it">
-<head>
-	<!-- Global site tag (gtag.js) - Google Analytics forz -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZQXR54MKJM"></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-ZQXR54MKJM');</script>
-	<!-- Google Tag Manager website-->
-	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-TP7CWBV');</script>
-	<!-- End Google Tag Manager -->
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="Alfonso Pisicchio, Developer, Coder, OpenSource lover">
-	<meta name="author" content="Alfonso Pisicchio">
-	<meta name="keywords" content="Alfonso Pisicchio, Sviluppatore, Developer, PHP, Bash, Javascript,">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta name="theme-color" content="#BE1622">
-	<meta name="color-scheme" content="light dark">
-	<title>Alfonso Pisicchio</title>	
-	<!-- for old devices -->
-	<meta name="HandheldFriendly" content="true" />
-	<!-- mod full screen -->
-	<meta name="mobile-web-app-capable" content="yes">
+<html lang="en">
+  <head>
+    <title>Alfonso Pisicchio</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Alfonso Pisicchio, Developer, Coder, OpenSource lover">
+    <meta name="author" content="Alfonso Pisicchio">
+    <meta name="keywords" content="Alfonso Pisicchio, Sviluppatore, Developer, PHP, Bash, NodeJS, Express, Javascript, MySQL, MariaDB, MongoDB">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="theme-color" content="#BE1622">
+    <!-- for old devices -->
+    <meta name="HandheldFriendly" content="true" />
+    <!-- mod full screen -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- full screnn ios-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Alfonso">
+    <!-- icon ios-->
+    <link rel="apple-touch-icon" href="/image/AP-dev1.png">
+    <!-- icon android -->
+    <link rel="icon" sizes="192x192" href="/image/AP-dev1.png">
+    <!-- Windows  -->
+    <meta name="msapplication-navbutton-color" content="red">
+    <meta name="msapplication-TileColor" content="red">
+    <!--<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
+    <meta name="msapplication-config" content="browserconfig.xml">-->
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <link rel="stylesheet" href="/libs/fontawesome/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap" rel="stylesheet"/>   
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
+    <link rel='stylesheet' href='/css/style.css'/>
+  </head>
+  
+  <body>
+    <!-- START NAV -->
+    <nav id="navbar" class="nav">
+      <div clas="col"><img id="logo" src="/images/android-icon-72x72.png" alt="logoAlfonsoPisicchio"></div>
+      <ul class="nav-list">
+        <li>
+          <a href="#welcome-section">About</a>
+        </li>
+        <li>
+          <a href="#projects">Work</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- END NAV -->
 
-	<!-- full screnn ios-->
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<meta name="apple-mobile-web-app-title" content="Alfonso">
+    <!-- START WELCOME SECTION -->
+    <section id="welcome-section" class="welcome-section">
+      <h1>Hey I am Alfonso</h1>
+      <p id="whoIam"></p>
+    </section>
+    <!-- END WELCOME SECTION -->
 
-	<!-- icon ios-->
-	<link rel="apple-touch-icon" href="libs/image/AP-dev1.png">
+    <!-- START PROJECTS SECTION -->
+    <section id="projects" class="projects-section">
+      <h2 class="projects-section-header">These are some of my projects</h2>
 
-	<!-- icon android -->
-	<link rel="icon" sizes="192x192" href="libs/image/AP-dev1.png">
+      <div class="projects-grid">
+        <a href="https://github.com/Forz70043/dynamicVH" target="_blank" class="project project-tile">
+          <img class="project-image" src="/images/dynamicVH.png" alt="project_dynamicVH"/>
+          <p class="project-title">
+            <span class="code">&lt;</span>
+            dynamicVH.sh
+            <span class="code">&#47;&gt;</span>
+          </p>
+        </a>
+        <a href="" target="_blank" class="project project-tile">
+          <img class="project-image" src="/images/wip.gif" alt="work in progress"/>
+          <p class="project-title">
+            <span class="code">&lt;</span>
+              Work in Progress
+            <span class="code">&#47;&gt;</span>
+          </p>
+        </a>
+        <a href="" target="_blank" class="project project-tile">
+          <img class="project-image" src="/images/wip.gif" alt="work in progress"/>
+          <p class="project-title">
+            <span class="code">&lt;</span>
+            Work in Progress
+            <span class="code">&#47;&gt;</span>
+          </p>
+        </a><!--
+        <a href="" target="_blank" class="project project-tile">
+          <img class="project-image" src="" alt=""/>
+          <p class="project-title">
+            <span class="code">&lt;</span>
+              XXX
+            <span class="code">&#47;&gt;</span>
+          </p>
+        </a>
+        <a href="" target="_blank" class="project project-tile">
+          <img class="project-image" src="" alt=""/>
+          <p class="project-title">
+            <span class="code">&lt;</span>
+              XXX
+            <span class="code">&#47;&gt;</span>
+          </p>
+        </a>
+        <a href="" target="_blank" class="project project-tile">
+          <img class="project-image" src="" alt=""/>
+          <p class="project-title">
+            <span class="code">&lt;</span>
+              XXX
+            <span class="code">&#47;&gt;</span>
+          </p>
+        </a>-->
+      </div>
 
-	<!-- Windows  -->
-	<meta name="msapplication-navbutton-color" content="red">
-	<meta name="msapplication-TileColor" content="red">
-	<!--<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
-	<meta name="msapplication-config" content="browserconfig.xml">-->
+      <a href="https://github.com/Forz70043/" class="btn btn-show-all" target="_blank">
+        Show all
+        <i class="fas fa-chevron-right"></i>
+      </a>
+    </section>
+    <!-- END PROJECTS SECTION -->
 
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
-	<link rel="stylesheet" href="libs/bootstrap/bootstrap.min.css">
-	<link rel="stylesheet" href="libs/fontawesome/all.min.css">
-	
-	<link rel="stylesheet" href="css/dark.css" media="(prefers-color-scheme: dark)">
-	<link rel="stylesheet" href="css/light.css" media="(prefers-color-scheme: light)">
-	<!-- The main stylesheet -->
-	<link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" href="favicon.ico">
-    <!-- Manifest.json  -->
-	<link rel="manifest" href="manifest.json">
-</head>
+    <!-- START CONTACT SECTION -->
+    <section id="contact" class="contact-section">
+      <div class="contact-section-header">
+        <h2>Let's work together...</h2>
+        <p>How do you take your coffee?</p>
+      </div>
+      <div class="contact-links">
+        <a href="https://linkedin.com/in/alfonsopisicchio" target="_blank" class="btn contact-details">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a id="profile-link" href="https://github.com/forz70043" target="_blank" class="btn contact-details">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="mailto:alfonso.pisicchio@gmail.com" class="btn contact-details">
+          <i class="fas fa-at"></i> Send a mail
+        </a>
+        <a href="https://wa.me/+393277180663" class="btn contact-details">
+          <i class="fab fa-whatsapp"></i> Text me
+        </a>
+        <a href="/cv" class="btn contact-details">
+          <i class="fas fa-file-pdf"></i> CV
+        </a>
+      </div>
+    </section>
+    <!-- END CONTACT SECTION -->
 
-<body>
-	
-	<div class="ml-4 mr-4 mb-4">
-		<label id="typeWriter"><label class="cursor"></label>
-	</div>
+    <!-- START FOOTER SECTION -->
+    <!--
+    <footer>
+      <p>
+        **This is just a fake portfolio. All the projects and contact details given
+        are not real.
+      </p>
+      <p>
+        &copy; Created for
+        <a href="" target="_blank"
+          >freeCodeCamp <i class="fab fa-free-code-camp"></i
+        ></a>
+      </p>
+    </footer>
+    -->
+    <!-- END FOOTER SECTION -->
+  </body>
+  <script src="/js/main.js"></script>
+  <!--<script src="./js/jquery.min.js"></script>-->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
 
-	<div class="d-none" id="linkbox">
-		<div class="d-flex justify-content-center d-none">
-			<a href="https://github.com/Forz70043" title="GitHub" class="btn btn-outline-light ml-5"><span class="fab fa-github"></span></a>
-			<button type="button" data-toggle="modal" data-target="#exampleModal" class="btn btn-outline-light ml-5"><span class="fa fa-address-card"></span></button>
-		</div>
-	</div>
-
-  	<!-- Modal -->
-	<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLabel"><span class="fa fa-address-card"></span> Info</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true">&times;</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<div class="row">
-						<div class="form-group col">
-							<label class="bold">Chat </label><br/>
-							<div class="row">
-								<div class="form-group col">
-									<button type="button" title="LinkedIn" class="btn btn-sm btn-primary rounded-circle" onclick="window.location.href='https://www.linkedin.com/in/alfonsopisicchio/'">
-										<span class="fab fa-linkedin-in"></span>
-									</button>&nbsp;
-									<button type="button" title="WhatsApp" class="btn btn-sm btn-success rounded-circle" onclick="window.location.href='https://wa.me/+393277180663'">
-										<span class="fab fa-whatsapp"></span>
-									</button>
-								</div>
-							</div>
-						</div>
-						<div class="form-group col">
-							<label>Email</label><br/>
-							<button type="button" class="btn btn-sm btn-primary rounded-circle" onclick="window.location.href='mailto:alfonso.pisicchio@gmail.com?subject=Big%20News'" title="Write me email">
-								<span class="fa fa-envelope"></span>
-							</button>
-						</div>
-						<div class="form-group col">
-							<label>CV</label><br/>
-							<a href="/document.pdf" class="btn btn-sm btn-info rounded-circle" target="_blank" title="Apri CV" alt="View CV"><span class="fas fa-file-pdf"></span></a>	
-						</div>
-					</div>	
-			</div>
-					</div>	
-				</div>
-			</div>
-		</div>
-	</div>
-	<footer class="text-center text-lg-start footer">
-		<div id="cp" class="text-center p-3">
-		  © 2021
-			<a class="primary" href="https://pisicchio.dev">pisicchio.dev</a>
-			<a href="https://www.iubenda.com/privacy-policy/77575408" class="iubenda-black iubenda-embed ml-3 mt-1" title="Privacy Policy ">Privacy Policy</a>
-			<script type="text/javascript">(function (w,d) {var loader = function () {var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0]; s.src="https://cdn.iubenda.com/iubenda.js"; tag.parentNode.insertBefore(s,tag);}; if(w.addEventListener){w.addEventListener("load", loader, false);}else if(w.attachEvent){w.attachEvent("onload", loader);}else{w.onload = loader;}})(window, document);</script>
-			<dark-mode-toggle id="dark-mode-toggle-1" legend="" mode="dark" appearance="toggle" dark="light" light="dark" remember="Remember this"></dark-mode-toggle>
-		</div>
-	</footer>
-	<!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>-->
-	<script type="text/javascript" src="libs/jQueryv3.5.1.js"></script>
-	<script src="script.js"></script>
-	<script src="libs/bootstrap/bootstrap.min.js"></script>
-	<script src="libs/fontawesome/all.min.js"
-	<script type="module" src="https://unpkg.com/dark-mode-toggle"></script>
-</body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TP7CWBV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <script src="/libs/fontawesome/all.min.js"></script>
+  <script src="./js/core.js"></script>
+  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
 </html>
