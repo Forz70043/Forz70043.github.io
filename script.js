@@ -1,4 +1,4 @@
-log("start");
+console.log("start");
 $(document).ready(function() {
 
     /*if (window.matchMedia('(prefers-color-scheme)').media !== 'not all') {
