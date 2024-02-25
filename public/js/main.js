@@ -11,15 +11,7 @@ window.onload = (event) => {
     console.log('page is fully loaded');
     
     var stories = ['Developer', 'OpenSource Lover', 'Programmer', 'Backend Developer', 'Frontend Developer'];
-    console.log(stories);
-    
-    //var text = el.innerText;
-    //console.log(text);
-    /* for(var i=0; i<stories.length; i++){
-        for(var k=0; k < stories[i].length; k++){
-        }
-    } */
-
+    console.log("stories", stories);
 
     var app = document.getElementById('whoIam');
  
