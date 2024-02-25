@@ -8,10 +8,10 @@ function getStoriesLanguage(){
 }
 
 window.onload = (event) => {
-    console.log('page is fully loaded');
+    //console.log('page is fully loaded');
     
     var stories = ['Developer', 'OpenSource Lover', 'Programmer', 'Backend Developer', 'Frontend Developer'];
-    console.log("stories", stories);
+    //console.log("stories", stories);
 
     var app = document.getElementById('whoIam');
  
