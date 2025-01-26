@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/cv', (req, res, next)=>{
-  res.download('./CV_PISICCHIO_ALFONSO.pdf');
+  res.download('./CV.pdf');
 });
 
 
