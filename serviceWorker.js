@@ -18,13 +18,13 @@ const initialCache = [
   "/libs/image/sun.png",
   "/libs/image/wip.gif",
   "/libs/image/dynamicVH.png",
+  "/libs/image/cpu_monitor.png",
   "/libs/bootstrap/bootstrap.min.css",
   "/libs/bootstrap/bootstrap.min.js",
   "/libs/fontawesome/all.min.css",
   "/libs/fontawesome/all.min.js",
   "/document.pdf",
   "/favicon.ico",
-
 ]
 
 // Installing Service Worker
