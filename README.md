@@ -43,3 +43,50 @@ _Note: Replace this link with an actual screenshot of your portfolio._
    ```bash
    git clone https://github.com/Forz70043/Forz70043.github.io.git
    cd Forz70043.github.io
+    Open the index.html file:
+    You can open it directly in your browser or use a local server like Live Server for testing.
+
+🗂️ Project Structure
+
+    css/: Contains stylesheets for layout and design.
+    webfonts/: Stores font files required by the project.
+    libs/: Includes external libraries (e.g., Font Awesome).
+    index.html: The main file of the portfolio.
+    README.md: Documentation for the project.
+
+🤝 Contributing
+
+Contributions are welcome! If you have suggestions or want to improve something, follow these steps:
+
+    Fork the repository.
+    Create a branch for your changes:
+
+    git checkout -b feature-improvement
+
+    Submit a pull request describing your updates.
+
+📧 Contact
+
+    Email: alfonso@example.com
+    LinkedIn: LinkedIn Profile
+    GitHub: Forz70043
+
+📜 License
+
+This project is licensed under the GPL-3.0. For more details, refer to the LICENSE file.
+💡 Notes
+
+If you encounter any issues or want to report a bug, feel free to open a ticket in the Issues section.
+
+Thank you for visiting my portfolio repository! 🌟
+
+
+---
+
+### **Highlights of the Update**
+1. **Professional Tone:** The language is tailored for an international audience, maintaining clarity and professionalism.
+2. **Structure:** Key sections such as installation, features, and technologies are clearly outlined.
+3. **Call to Action:** Encouraged contributions and provided clear instructions for collaboration.
+4. **Screenshots:** Placeholder added for visual representation—replace it with your actual screenshot.
+
+Let me know if you'd like any further adjustments! 😊
