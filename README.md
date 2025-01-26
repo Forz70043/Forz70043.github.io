@@ -32,12 +32,6 @@ This portfolio was created to:
 
 ---
 
-## 🖼️ Screenshots
-![Homepage Screenshot](https://via.placeholder.com/800x400?text=Portfolio+Screenshot)  
-_Note: Replace this link with an actual screenshot of your portfolio._
-
----
-
 ## 🧰 Installation and Usage
 1. **Clone the repository:**
    ```bash
