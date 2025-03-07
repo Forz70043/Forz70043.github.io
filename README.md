@@ -61,8 +61,6 @@ Contributions are welcome! If you have suggestions or want to improve something,
 
 📧 Contact
 
-    Email: alfonso@example.com
-    LinkedIn: LinkedIn Profile
     GitHub: Forz70043
 
 📜 License
