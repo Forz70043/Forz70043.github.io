@@ -71,14 +71,3 @@ This project is licensed under the GPL-3.0. For more details, refer to the LICEN
 If you encounter any issues or want to report a bug, feel free to open a ticket in the Issues section.
 
 Thank you for visiting my portfolio repository! 🌟
-
-
----
-
-### **Highlights of the Update**
-1. **Professional Tone:** The language is tailored for an international audience, maintaining clarity and professionalism.
-2. **Structure:** Key sections such as installation, features, and technologies are clearly outlined.
-3. **Call to Action:** Encouraged contributions and provided clear instructions for collaboration.
-4. **Screenshots:** Placeholder added for visual representation—replace it with your actual screenshot.
-
-Let me know if you'd like any further adjustments! 😊
