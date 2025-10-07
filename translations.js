@@ -1,7 +1,13 @@
 const translations = {
   it: {
     'hero-title': 'Ciao, sono Alfonso 👋',
-    'hero-subtitle': 'Full-stack Developer • Creo applicazioni web moderne e performanti',
+    'hero-subtitle': [
+      "Sviluppatore",
+      "Open Source Enthusiast.",
+      "Appassionato di tecnologia.",
+      "Curioso per natura.",
+      "SUP lover"
+    ],
     'hero-cta-projects': 'Guarda i miei progetti',
     'hero-cta-cv': 'Scarica CV',
     'about-title': 'Chi sono',
@@ -24,7 +30,14 @@ const translations = {
   },
   en: {
     'hero-title': 'Hi, I am Alfonso 👋',
-    'hero-subtitle': 'Full-stack Developer • I build modern and performant web applications',
+    'hero-subtitle': [
+      "Programmer.",
+      "Stand up Paddle Lover.",
+      "Open Source Enthusiast.",
+      "Technology Lover.",
+      "System Integrator.",
+      "Naturally Curious.",
+    ],  
     'hero-cta-projects': 'Check my projects',
     'hero-cta-cv': 'Download CV',
     'about-title': 'About me',
