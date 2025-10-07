@@ -2,20 +2,20 @@ const userLang = navigator.language || navigator.userLanguage;
 const lang = 'en';//userLang.startsWith('it') ? 'it' : 'en';
 
 /**
- * Effetto di scrittura con cursore lampeggiante
+ * Typewriter effect
  * @param {HTMLElement} element - elemento DOM su cui scrivere
  * @param {string|string[]} text - testo o array di frasi
  * @param {number} speed - velocità digitazione
  */
 function typeWriterEffect(element, text, speed = 80) {
-  // Stile originale
+  // Original styles and classes
   const originalStyles = window.getComputedStyle(element);
   const originalClasses = Array.from(element.classList);
-  // Rimuove testo e cursore precedenti
+  // Remove original content and set up container
   element.textContent = "";
   element.classList.add("typewriter-container");
 
-  // Crea elemento testo e cursore
+  // Create text and cursor elements
   const textSpan = document.createElement("span");
   const cursor = document.createElement("span");
   cursor.className = "typewriter-cursor";
@@ -23,7 +23,7 @@ function typeWriterEffect(element, text, speed = 80) {
   element.appendChild(textSpan);
   element.appendChild(cursor);
 
-  // Gestione di singola frase o più frasi
+  // Single phrase or multiple phrases
   const phrases = Array.isArray(text) ? text : [text];
   let phraseIndex = 0;
   let charIndex = 0;
@@ -36,7 +36,7 @@ function typeWriterEffect(element, text, speed = 80) {
       charIndex++;
       if (charIndex === currentPhrase.length) {
         deleting = true;
-        setTimeout(type, 1500); // pausa dopo frase completa
+        setTimeout(type, 1500); // Pause after full phrase
         return;
       }
     } else {
@@ -55,7 +55,7 @@ function typeWriterEffect(element, text, speed = 80) {
 }
 
 /**
- * Applica le traduzioni agli elementi con data-i18n
+ * Set text content based on selected language
  */
 function applyTranslations() {
   const elements = document.querySelectorAll('[data-i18n]');
@@ -63,10 +63,10 @@ function applyTranslations() {
     const key = el.getAttribute('data-i18n');
     if (translations[lang] && translations[lang][key]) {
       const text = translations[lang][key];
-      // Se è l'elemento hero, applica l'effetto scrittura
+      // Use typewriter effect for specific keys
       if (el.id === "hero-subtitle" || key === "hero-subtitle") {
         typeWriterEffect(el, text, 70);
-        //el.textContent = text;
+        
       } else {
         el.textContent = text;
       }
