@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+.typewriter-cursor {
+  display: inline-block;
+  margin-left: 4px;
+  animation: blink 0.8s steps(1) infinite;
+}
+
+#about-text {
+  white-space: pre-line;
+}
+
+/* Effect for blink cursor */
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+
+/* background tech pulsating */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}

@@ -1,7 +1,7 @@
 {
   "name": "Alfonso Pisicchio",
   "short_name": "Alfonso",
-  "description": "Simple Portfolio",
+  "description": "Alfonso Pisicchio - Software Developer Portfolio",
   "icons": [
     {
       "src": "libs/image/android-icon-36x36.png",
@@ -43,5 +43,9 @@
   "start_url": "index.html",
   "display": "fullscreen",
   "background_color": "#050505",
-  "theme_color": "#BE1622"
+  "theme_color": "#BE1622",
+  "lang": "en",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "categories": ["business", "portfolio", "development"]
   }

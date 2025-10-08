@@ -1,174 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Alfonso Pisicchio</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Alfonso Pisicchio, Developer, Coder, OpenSource lover">
-    <meta name="author" content="Alfonso Pisicchio">
-    <meta name="keywords" content="Alfonso Pisicchio, Sviluppatore, Developer, PHP, Bash, NodeJS, Express, Javascript, MySQL, MariaDB, MongoDB">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta name="theme-color" content="#BE1622">
-    <!-- for old devices -->
-    <meta name="HandheldFriendly" content="true" />
-    <!-- mod full screen -->
-    <meta name="mobile-web-app-capable" content="yes">
-    <!-- full screnn ios-->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Alfonso">
-    <!-- icon ios-->
-    <link rel="apple-touch-icon" href="/libs/image/AP-dev1.png">
-    <!-- icon android -->
-    <link rel="icon" sizes="192x192" href="/libs/image/AP-dev1.png">
-    <!-- Windows  -->
-    <meta name="msapplication-navbutton-color" content="red">
-    <meta name="msapplication-TileColor" content="red">
-    <!--<meta name="msapplication-TileImage" content="ms-icon-144x144.png">
-    <meta name="msapplication-config" content="browserconfig.xml">-->
-    <link rel="shortcut icon" href="/favicon.ico"/>
-    <!--<link rel="stylesheet" href="/libs/fontawesome/all.min.css"/>-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,400&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css?family=Raleway:700&display=swap" rel="stylesheet"/>   
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&display=swap">
-    <link rel='stylesheet' href='/css/style.css'/>
-    <!-- Manifest.json  -->
-	  <link rel="manifest" href="manifest.json">
-  </head>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Alfonso Pisicchio</title>
+  <link href="style.css" rel="stylesheet">
+  <link rel="manifest" href="manifest.json">
+  <meta name="author" content="Alfonso Pisicchio" />
+  <meta name="theme-color" content="#2563eb">
+  <meta name="description" content="Alfonso Pisicchio Portfolio, Full-stack Developer. Check my projects, tech stack and contact me for collaborations.">
+  <meta name="keywords" content="developer, portfolio, php, mysql, javascript, node, express, bash, system integration, mongodb, docker, programmer, tech-leader" />
+  <meta name="author" content="Alfonso Pisicchio" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Alfonso Pisicchio - Portfolio" />
+  <meta property="og:description" content="Alfonso Pisicchio Portfolio, Full-stack Developer. Check my projects, tech stack and contact me for collaborations." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://forz70043.github.io/" />
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-sans transition-colors duration-300">
   
-  <body>
-    <!-- START NAV -->
-    <nav id="navbar" class="nav">
-      <div clas="col"><img id="logo" src="/libs/image/apple-icon-72x72.png" alt="logoAlfonsoPisicchio"></div>
-      <ul class="nav-list">
+  <!-- NAVBAR -->
+  <header class="fixed top-0 left-0 w-full bg-white dark:bg-gray-800 shadow z-50 transition-colors duration-300">
+    <nav class="container mx-auto flex justify-between items-center p-4">
+      <!-- LOGO -->
+      <a href="#alfonsoPisicchio" class="text-xl font-bold text-gray-900 dark:text-white">Alfonso Pisicchio</a>
+
+      <!-- HAMBURGER BUTTON (solo mobile) -->
+      <button id="menu-toggle" class="md:hidden p-2 rounded bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white">☰</button>
+
+      <!-- MENU LINKS (desktop) -->
+      <ul id="menu" class="hidden md:flex space-x-6 items-center">
+        <li><a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-about"></a></li>
+        <li><a href="#projects" class="hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-projects"></a></li>
+        <li><a href="#stack" class="hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-stack"></a></li>
+        <li><a href="#contact" class="hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-contact"></a></li>
         <li>
-          <a href="#welcome-section">About</a>
-        </li>
-        <li>
-          <a href="#projects">Work</a>
-        </li>
-        <li>
-          <a href="#skills">Stack</a>
-        </li>
-        <li>
-          <a href="#contact">Contacts</a>
+          <button id="theme-toggle" class="ml-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white transition-colors duration-300">🌙</button>
         </li>
       </ul>
     </nav>
-    <!-- END NAV -->
 
-    <!-- START WELCOME SECTION -->
-    <section id="welcome-section" class="welcome-section">
-      <h1>Hey I am Alfonso</h1>
-      <p id="whoIam"></p>
-    </section>
-    <!-- END WELCOME SECTION -->
+    <!-- MENU MOBILE -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 px-6 py-4 space-y-4 shadow">
+      <a href="#about" class="block hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-about">About</a>
+      <a href="#projects" class="block hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-projects">Progetti</a>
+      <a href="#stack" class="block hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-stack">Stack</a>
+      <a href="#contact" class="block hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-contact">Contatti</a>
+      <button id="theme-toggle-mobile" class="mt-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white transition-colors duration-300">🌙</button>
+    </div>
+  </header>
 
-    <!-- START PROJECTS SECTION -->
-    <section id="projects" class="projects-section">
-      <h2 class="projects-section-header">These are some of my projects</h2>
+  <!-- HERO -->
+  <section id="hero" class="h-screen flex items-center justify-center bg-gradient-to-br from-[#0a0f1c] via-[#0c1c25] to-[#0e2330] text-gray-100 relative overflow-hidden">
+    <!-- Griglia tech di sfondo -->
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(34,197,94,0.15)_1px,transparent_1px)] bg-[length:22px_22px] animate-[pulse_3s_ease-in-out_infinite]"></div>
 
-      <div class="projects-grid">
-        <a href="https://github.com/Forz70043/dynamicVH" target="_blank" class="project project-tile">
-          <img class="project-image" src="/libs/image/dynamicVH.png" alt="project_dynamicVH"/>
-          <p class="project-title">
-            <span class="code">&lt;</span>
-            dynamicVH.sh
-            <span class="code">&#47;&gt;</span>
-          </p>
-        </a>
-        <a href="https://github.com/Forz70043/CPU_monitor" target="_blank" class="project project-tile">
-          <img class="project-image" src="/libs/image/cpu_monitor.png" alt="project_cpu_monitor"/>
-          <p class="project-title">
-            <span class="code">&lt;</span>
-             CPU Monitor
-            <span class="code">&#47;&gt;</span>
-          </p>
-        </a>
-        <a href="https://github.com/Forz70043/node-api" target="_blank" class="project project-tile">
-          <img class="project-image" src="/libs/image/node-api.png" alt="project_node_api"/>
-          <p class="project-title">
-            <span class="code">&lt;</span>
-             Node API
-            <span class="code">&#47;&gt;</span>
-          </p>
-        </a>
-        <a href="" target="_blank" class="project project-tile">
-          <img class="project-image" src="/libs/image/wip.gif" alt="work-in-progress"/>
-          <p class="project-title">
-            <span class="code">&lt;</span>
-            Work in Progress
-            <span class="code">&#47;&gt;</span>
-          </p>
-        </a>
+    <div class="relative z-10 text-center px-4">
+      <h1 id="hero-title" data-i18n="hero-title" class="text-4xl md:text-6xl font-extrabold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-400 drop-shadow-lg"></h1>
+
+      <p id="hero-subtitle" data-i18n="hero-subtitle" class="text-lg md:text-2xl mb-6 text-emerald-300 font-mono"></p>
+
+      <div class="space-x-4">
+        <a id="hero-cta-projects" data-i18n="hero-cta-projects" href="#projects" class="px-6 py-3 bg-transparent text-emerald-400 border border-emerald-400 rounded-xl font-semibold hover:bg-emerald-400 hover:text-gray-900 transition-all duration-300"></a>
+
+        <a id="hero-cta-cv" data-i18n="hero-cta-cv" href="AlfonsoPisicchio.pdf" target="_blank" class="px-6 py-3 bg-gray-800 text-emerald-400 rounded-xl font-semibold shadow hover:bg-gray-700 border border-emerald-500 transition-colors"></a>
       </div>
+    </div>
+  </section>
 
-      <a href="https://github.com/Forz70043/" class="btn btn-show-all" target="_blank">
-        Show all
-        <i class="fas fa-chevron-right"></i>
-      </a>
-    </section>
-    <!-- END PROJECTS SECTION -->
-    
-    <section id="skills" class="skills-section">
-      <h2 class="skills-section-header">Tech Stack</h2>
-      <div class="skills-grid">
-        <a href="https://www.php.net/" class="skill" target="_blank">
-          <img class="skills-image" src="/public/images/php.png" alt="PHP" />
-        </a>
-        <a href="https://www.javascript.com/" class="skill" target="_blank">
-          <img class="skills-image" src="/public/images/javascript.png" alt="JavaScript" />
-        </a>
-        <a href="https://nodejs.org/" class="skill" target="_blank">
-          <img class="skills-image" src="/public/images/nodeJS.png" alt="NodeJS" />
-        </a>
-        <a href="https://www.mysql.com" class="skill" target="_blank">
-          <img class="skills-image" src="/public/images/mySQL.jpg" alt="mySQL" />
-        </a>
-        <a href="https://www.mongodb.com/" class="skill" target="_blank">
-          <img class="skills-image" src="/public/images/mongoDB.jpg" alt="mongoDB" />
-        </a>
-        <a href="https://git-scm.com/" class="skill" target="_blank">
-          <img class="skills-image" src="/public/images/git.png" alt="GIT" />
-        </a>
-        <a href="https://git-scm.com/" class="skill" target="_blank">
-          <img class="skills-image" src="/public/images/bash.jpg" alt="CSS" />
-        </a>
-      </div>
-    </section>
+  <!-- ABOUT -->
+  <section id="about" class="container mx-auto py-20 px-6 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+    <h2 id="about-title" data-i18n="about-title" class="text-3xl font-bold mb-6"></h2>
+    <p id="about-text" data-i18n="about-text" class="max-w-3xl text-lg leading-relaxed"></p>
+  </section>
 
-    <!-- START CONTACT SECTION -->
-    <section id="contact" class="contact-section">
-      <div class="contact-section-header">
-        <h2>Let's work together...</h2>
-        <p>Let's have a beer together !</p>
+  <!-- PROJECTS -->
+  <section id="projects" class="bg-gray-100 dark:bg-gray-900 py-20 px-6 transition-colors duration-300">
+    <div class="container mx-auto">
+      <h2 id="projects-title" data-i18n="projects-title" class="text-3xl font-bold mb-12"></h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Project 1 -->
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition p-4">
+          <img src="/libs/image/AP-dev1.png" alt="Portfolio Website" class="rounded-lg mb-4">
+          <h3 data-i18n="project1-title" class="font-bold text-xl mb-2"></h3>
+          <p data-i18n="project1-desc" class="text-gray-600 dark:text-gray-300 mb-4"></p>
+          <a data-i18n="project1-link-text" href="https://github.com/Forz70043/Forz70043.github.io" class="text-blue-600 dark:text-blue-400 hover:underline"></a>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition p-4">
+          <img src="/libs/image/dynamicVH.png" alt="dynamicVH" class="rounded-lg mb-4">
+          <h3 data-i18n="project2-title" class="font-bold text-xl mb-2"></h3>
+          <p data-i18n="project2-desc" class="text-gray-600 dark:text-gray-300 mb-4"></p>
+          <a data-i18n="project2-link-text" href="https://github.com/Forz70043/dynamicVH" class="text-blue-600 dark:text-blue-400 hover:underline"></a>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition p-4">
+          <img src="/libs/image/node-api.png" alt="Node API" class="rounded-lg mb-4">
+          <h3 data-i18n="project3-title" class="font-bold text-xl mb-2"></h3>
+          <p data-i18n="project3-desc" class="text-gray-600 dark:text-gray-300 mb-4"></p>
+          <a data-i18n="project3-link-text" href="https://github.com/Forz70043/node-api" class="text-blue-600 dark:text-blue-400 hover:underline"></a>
+        </div>
       </div>
-      <div class="contact-links">
-        <a href="https://linkedin.com/in/alfonsopisicchio" target="_blank" class="btn contact-details">
-          <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
-        <a id="profile-link" href="https://github.com/forz70043" target="_blank" class="btn contact-details">
-          <i class="fab fa-github"></i> GitHub
-        </a>
-        <a href="mailto:alfonso.pisicchio@gmail.com" class="btn contact-details">
-          <i class="fas fa-at"></i> Send a mail
-        </a>
-        <a href="https://wa.me/+393277180663" class="btn contact-details">
-          <i class="fab fa-whatsapp"></i> Text me
-        </a>
-        <a href="/CV.pdf" class="btn contact-details">
-          <i class="fas fa-file-pdf"></i> CV
-        </a>
-      </div>
-    </section>
-    <!-- END CONTACT SECTION -->
-  </body>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-  <script src="/libs/fontawesome/all.min.js"></script>
-  <script src="/script.js"></script>
-  <script src="/public/js/main.js"></script>
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section id="stack" class="container mx-auto py-20 px-6 transition-colors duration-300">
+    <h2 id="stack-title" data-i18n="stack-title" class="text-3xl font-bold mb-12"></h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors">JavaScript</div>
+      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors">Node.js</div>
+      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors">PHP</div>
+      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors">Python Script</div>
+      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors">MySQL</div>
+      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors">MongoDB</div>
+      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors">Bash</div>
+      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors">Symfony</div>
+      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors">Magento 2</div>
+      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors">Git</div>
+      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors">GitHub - BitBucket</div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-20 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100">
+    <div class="container mx-auto text-center px-4">
+      <h2 id="contact-title" class="text-3xl font-bold mb-6" data-i18n="contact-title"></h2>
+      <p id="contact-text" class="mb-6 text-lg dark:text-slate-300" data-i18n="contact-text"></p>
+      <a id="contact-button" href="mailto:alfonso.pisicchio@gmail.com" data-i18n="contact-button"
+        class="px-8 py-3 bg-emerald-500 text-black dark:text-white rounded-xl font-semibold hover:bg-emerald-400 transition-colors"></a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 dark:bg-gray-800 text-gray-400 text-center py-6 transition-colors duration-300">
+    © 2025 Alfonso Pisicchio – Portfolio
+  </footer>
+
+  <!-- SCRIPT -->
+  <script src="translations.js"></script>
+  <script src="lang.js"></script>
+  <script src="menu.js"></script>
+  <script src="theme-toggle.js"></script>
+  <script src="sw-register.js"></script>
+</body>
 </html>
