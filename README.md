@@ -25,9 +25,8 @@ This portfolio was created to:
 
 ## 🛠️ Technologies Used
 - **HTML5:** For content structure.
-- **CSS3:** For styling and responsive layouts.
 - **JavaScript:** For interactivity and dynamic elements.
-- **Font Awesome:** For icons and improved UI design.
+- **TailwindCSS:** For styles and UI design.
 - **GitHub Pages:** For hosting and deployment.
 
 ---
