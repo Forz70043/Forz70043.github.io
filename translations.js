@@ -1,6 +1,6 @@
 const translations = {
   it: {
-    'hero-title': 'Ciao, sono Alfonso 👋',
+    'hero-title': 'Ciao, sono Alfonso',
     'hero-subtitle': [
       "Sviluppatore",
       "Open Source Enthusiast.",
@@ -29,7 +29,7 @@ const translations = {
     'menu-contact': 'Contatti'
   },
   en: {
-    'hero-title': 'Hi, I am Alfonso 👋',
+    'hero-title': 'Hi, I am Alfonso',
     'hero-subtitle': [
       "Programmer.",
       "Stand up Paddle Lover.",
