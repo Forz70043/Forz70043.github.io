@@ -7,7 +7,7 @@
   }
 
   function randJitter(base) {
-    // rende la digitazione un po' "umana"
+    // make typing a bit more "human"
     const jitter = Math.round(base * 0.25);
     return base - jitter + Math.floor(Math.random() * (jitter * 2 + 1));
   }
@@ -21,15 +21,15 @@
 
   function Typewriter(opts) {
     this.opts = defaults(opts, {
-      typeSpeed: 90,      // ms per carattere (scrittura)
-      deleteSpeed: 40,    // ms per carattere (cancellazione)
-      pauseAfter: 1500,   // ms di pausa dopo una frase completa
-      loop: true,         // ripete le frasi
-      cursor: true,       // mostra cursore
+      typeSpeed: 90,      // ms per character (typing)
+      deleteSpeed: 40,    // ms per character (deleting)
+      pauseAfter: 1500,   // ms pause after a complete sentence
+      loop: true,         // repeat phrases
+      cursor: true,       // show cursor
       cursorChar: '|',
       cursorClass: 'tw-cursor',
       textClass: 'tw-text',
-      announceOnComplete: false, // accessibilità: annuncia la frase al termine
+      announceOnComplete: false, // accessibility: announce the phrase when complete
       humanize: true
     });
   }
@@ -42,16 +42,16 @@
     }
     const opt = defaults(options, this.opts);
 
-    // crea/usa uno span per il testo (non alteriamo il resto del contenuto)
+    // create/use a span for the text (don't alter the rest of the content)
     let textSpan = el.querySelector('.' + opt.textClass);
     if (!textSpan) {
       textSpan = document.createElement('span');
       textSpan.className = opt.textClass;
-      // inseriamo come primo figlio (così non rompere markup esistente)
+      // insert as first child (so we don't break existing markup)
       el.insertBefore(textSpan, el.firstChild);
     }
 
-    // cursore
+    // cursor
     let cursorSpan = el.querySelector('.' + opt.cursorClass);
     if (opt.cursor && !cursorSpan) {
       cursorSpan = document.createElement('span');
@@ -61,7 +61,7 @@
       el.appendChild(cursorSpan);
     }
 
-    // sr-only element per annunci (opzionale)
+    // sr-only element for announcements (optional)
     let sr = el.querySelector('.tw-sr-live');
     if (!sr) {
       sr = document.createElement('span');
@@ -85,20 +85,20 @@
     };
 
     controller.promise = new Promise((resolve) => {
-      let i = 0;      // index frase
-      let pos = 0;    // posizione carattere
+      let i = 0;      // index phrase
+      let pos = 0;    // position character
       let deleting = false;
 
       const step = () => {
         if (stopFlag.stopped) {
-          // pulizia opzionale
+          // cleanup optional
           if (cursorSpan) cursorSpan.remove();
           resolve();
           return;
         }
 
         const phrase = phrases[i] || '';
-        // Aggiorna testo visibile
+        // Update visible text
         if (!deleting) {
           pos = Math.min(pos + 1, phrase.length);
         } else {
@@ -106,20 +106,20 @@
         }
         textSpan.textContent = phrase.slice(0, pos);
 
-        // Messaggi di accessibilità solo al completamento frase (opzionale)
+        // Message accessibility only at the end of the phrase (optional)
         if (!deleting && pos === phrase.length && opt.announceOnComplete) {
           sr.textContent = phrase;
         }
 
         if (!deleting && pos < phrase.length) {
-          // continua a scrivere
+          // continue typing
           const delay = opt.humanize ? randJitter(opt.typeSpeed) : opt.typeSpeed;
           setTimeout(step, delay);
           return;
         }
 
         if (!deleting && pos === phrase.length) {
-          // pausa alla fine della frase, poi inizia cancellazione
+          // pause at the end of the phrase, then start deleting
           setTimeout(() => {
             deleting = true;
             setTimeout(step, opt.humanize ? randJitter(opt.deleteSpeed) : opt.deleteSpeed);
@@ -137,18 +137,18 @@
           deleting = false;
           i = (i + 1) % phrases.length;
           if (i === 0 && !opt.loop) {
-            // fine
+            // end
             if (cursorSpan) cursorSpan.remove();
             resolve();
             return;
           }
-          // piccola pausa prima della prossima frase
+          // small pause before the next phrase
           setTimeout(step, Math.max(80, Math.floor(opt.pauseAfter / 3)));
           return;
         }
       };
 
-      // avvia
+      // start
       step();
     });
 

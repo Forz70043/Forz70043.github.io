@@ -1,0 +1,21 @@
+# ------------------------------------------
+# robots.txt — pisicchio.dev
+# Author: Alfonso Pisicchio
+# Purpose: Allow full indexing of public pages
+# ------------------------------------------
+
+User-agent: *
+
+# ✅ Allow all content to be indexed
+Allow: /
+
+# 🚫 Optional exclusions (uncomment if needed)
+# Disallow: /private/
+# Disallow: /tmp/
+# Disallow: /assets/dev/
+
+# ✅ Sitemap location
+Sitemap: https://pisicchio.dev/sitemap.xml
+
+# ✅ Canonical domain (helps avoid duplicate content)
+Host: pisicchio.dev

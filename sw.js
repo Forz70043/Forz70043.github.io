@@ -1,15 +1,15 @@
 const CACHE_NAME = 'alfonso-pisicchio-cache-v1';
 const FILES_TO_CACHE = [
   './index.html',
-  './style.css',
-  './translations.js',
-  './lang.js',
-  './menu.js',
-  './theme-toggle.js',
+  './libs/css/style.css',
+  './libs/js/translations.js',
+  './libs/js/lang.js',
+  './libs/js/menu.js',
+  './libs/js/theme-toggle.js',
   './AlfonsoPisicchio.pdf',
-  './libs/image/AP-dev1.png',
-  './libs/image/dynamicVH.png',
-  './libs/image/node-api.png'
+  './libs/image/AP-dev1.webp',
+  './libs/image/dynamicVH.webp',
+  './libs/image/node-api.webp'
 ];
 
 self.addEventListener('install', event => {
