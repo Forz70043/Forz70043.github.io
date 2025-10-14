@@ -4,7 +4,7 @@ Welcome to the repository for my personal portfolio! 🎉
 This project showcases my work, skills, and provides ways to connect with me professionally.
 
 ## 🌐 Portfolio Link
-Check out my live portfolio here: [https://forz70043.github.io/](https://forz70043.github.io/)
+Check out my live portfolio here: [https://forz70043.github.io/](https://forz70043.github.io/) or [https://pisicchio.dev](https://pisicchio.dev)
 
 ---
 
@@ -19,7 +19,7 @@ This portfolio was created to:
 ## 🚀 Key Features
 - **Project Highlights:** A selection of my projects with direct links to GitHub repositories.
 - **Responsive Design:** Fully optimized for desktop, tablet, and mobile devices.
-- **Contact Section:** Links to my LinkedIn, GitHub, email, and WhatsApp for easy communication.
+- **Contact Section:** Links to my LinkedIn, GitHub, email for easy communication.
 
 ---
 
@@ -41,9 +41,7 @@ This portfolio was created to:
 
 🗂️ Project Structure
 
-    css/: Contains stylesheets for layout and design.
-    webfonts/: Stores font files required by the project.
-    libs/: Includes external libraries (e.g., Font Awesome).
+    libs/: Includes libraries (e.g., styles, js).
     index.html: The main file of the portfolio.
     README.md: Documentation for the project.
 
