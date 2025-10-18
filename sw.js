@@ -9,7 +9,8 @@ const FILES_TO_CACHE = [
   './AlfonsoPisicchio.pdf',
   './libs/image/AP-dev1.webp',
   './libs/image/dynamicVH.webp',
-  './libs/image/node-api.webp'
+  './libs/image/node-api.webp',
+  './libs/image/dev-kit.gif',
 ];
 
 self.addEventListener('install', event => {
