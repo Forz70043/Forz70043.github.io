@@ -14,6 +14,13 @@ This portfolio was created to:
 - Present my technical skills and programming expertise.
 - Offer a central point of contact for professional collaborations.
 
+## 📊 Lighthouse Score
+
+![Performance](https://img.shields.io/badge/Performance-98-success?style=for-the-badge&logo=google-lighthouse&logoColor=white)
+![Accessibility](https://img.shields.io/badge/Accessibilità-100-success?style=for-the-badge&logo=google-lighthouse&logoColor=white)
+![Best Practices](https://img.shields.io/badge/Best_Practices-100-success?style=for-the-badge&logo=google-lighthouse&logoColor=white)
+![SEO](https://img.shields.io/badge/SEO-100-success?style=for-the-badge&logo=google-lighthouse&logoColor=white)
+
 ---
 
 ## 🚀 Key Features
