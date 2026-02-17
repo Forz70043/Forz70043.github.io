@@ -29,8 +29,10 @@
       "@type": "Person",
       "name": "Alfonso Pisicchio",
       "url": "https://pisicchio.dev/",
+      "jobTitle": "Software Developer",
       "sameAs": [
-        "https://github.com/Forz70043"
+        "https://github.com/Forz70043",
+        "https://www.linkedin.com/in/alfonsopisicchio/",
       ]
     }
   </script>
@@ -48,10 +50,10 @@
 
       <!-- MENU LINKS (desktop) -->
       <ul id="menu" class="hidden md:flex space-x-6 items-center">
-        <li><a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-about"></a></li>
-        <li><a href="#projects" class="hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-projects"></a></li>
-        <li><a href="#stack" class="hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-stack"></a></li>
-        <li><a href="#contact" class="hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-contact"></a></li>
+        <li><a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-about" aria-label="About section"></a></li>
+        <li><a href="#projects" class="hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-projects" aria-label="Projects section"></a></li>
+        <li><a href="#stack" class="hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-stack" aria-label="Stack section"></a></li>
+        <li><a href="#contact" class="hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-contact" aria-label="Contact section"></a></li>
         <li>
           <button id="theme-toggle" class="ml-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white transition-colors duration-300">🌙</button>
         </li>
@@ -60,11 +62,11 @@
 
     <!-- MENU MOBILE -->
     <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 px-6 py-4 space-y-4 shadow">
-      <a href="#about" class="block hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-about"></a>
-      <a href="#projects" class="block hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-projects"></a>
-      <a href="#stack" class="block hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-stack"></a>
-      <a href="#contact" class="block hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-contact"></a>
-      <button id="theme-toggle-mobile" 
+      <a href="#about" class="block hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-about" aria-label="About section"></a>
+      <a href="#projects" class="block hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-projects" aria-label="Projects section"></a>
+      <a href="#stack" class="block hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-stack" aria-label="Stack section"></a>
+      <a href="#contact" class="block hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-contact" aria-label="Contact section"></a>
+      <button id="theme-toggle-mobile" aria-label="Toggle dark mode"
         class="mt-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white transition-colors duration-300">🌙
       </button>
     </div>
@@ -87,6 +89,7 @@
           id="hero-cta-projects"
           data-i18n="hero-cta-projects"
           href="#projects"
+          aria-label="View projects section"
           class="w-full md:w-auto px-6 py-3 bg-transparent text-emerald-400 border border-emerald-400 rounded-xl font-semibold hover:bg-emerald-400 hover:text-gray-900 transition-all duration-300 text-center"
         >
         </a>
@@ -95,6 +98,7 @@
           data-i18n="hero-cta-cv"
           href="AlfonsoPisicchio.pdf"
           target="_blank"
+          aria-label="Download CV"
           class="w-full md:w-auto px-6 py-3 bg-gray-800 text-emerald-400 rounded-xl font-semibold shadow hover:bg-gray-700 border border-emerald-500 transition-colors text-center"
         >
         </a>
@@ -118,7 +122,9 @@
           <img src="/libs/image/AP-dev1.webp" alt="Portfolio Website" class="rounded-lg mb-4">
           <h3 data-i18n="project1-title" class="font-bold text-xl mb-2"></h3>
           <p data-i18n="project1-desc" class="text-gray-600 dark:text-gray-300 mb-4"></p>
-          <a data-i18n="project1-link-text" href="https://github.com/Forz70043/Forz70043.github.io" class="text-blue-600 dark:text-blue-400 hover:underline"></a>
+          <a data-i18n="project1-link-text" href="https://github.com/Forz70043/Forz70043.github.io" 
+            class="text-blue-600 dark:text-blue-400 hover:underline"
+            aria-label="View project 1 on GitHub"></a>
         </div>
 
         <!-- Project 4 -->
@@ -127,7 +133,7 @@
           <h3 data-i18n="project4-title" class="font-bold text-xl mb-2"></h3>
           <p data-i18n="project4-desc" class="text-gray-600 dark:text-gray-300 mb-4"></p>
           <a data-i18n="project4-link-text" href="https://github.com/Forz70043/dev-toolkit" 
-            class="text-blue-600 dark:text-blue-400 hover:underline">
+            class="text-blue-600 dark:text-blue-400 hover:underline" aria-label="View project 4 on GitHub">
           </a>
         </div>
 
@@ -136,7 +142,8 @@
           <img src="/libs/image/dynamicVH.webp" alt="dynamicVH" class="rounded-lg mb-4">
           <h3 data-i18n="project2-title" class="font-bold text-xl mb-2"></h3>
           <p data-i18n="project2-desc" class="text-gray-600 dark:text-gray-300 mb-4"></p>
-          <a data-i18n="project2-link-text" href="https://github.com/Forz70043/dynamicVH" class="text-blue-600 dark:text-blue-400 hover:underline"></a>
+          <a data-i18n="project2-link-text" href="https://github.com/Forz70043/dynamicVH" 
+          class="text-blue-600 dark:text-blue-400 hover:underline" aria-label="View project 2 on GitHub"></a>
         </div>
 
         <!-- Project 3 -->
@@ -144,7 +151,8 @@
           <img src="/libs/image/node-api.webp" alt="Node API" class="rounded-lg mb-4">
           <h3 data-i18n="project3-title" class="font-bold text-xl mb-2"></h3>
           <p data-i18n="project3-desc" class="text-gray-600 dark:text-gray-300 mb-4"></p>
-          <a data-i18n="project3-link-text" href="https://github.com/Forz70043/node-api" class="text-blue-600 dark:text-blue-400 hover:underline"></a>
+          <a data-i18n="project3-link-text" href="https://github.com/Forz70043/node-api" 
+          class="text-blue-600 dark:text-blue-400 hover:underline" aria-label="View project 3 on GitHub"></a>
         </div>
       </div>
     </div>
@@ -173,7 +181,8 @@
     <div class="container mx-auto text-center px-4">
       <h2 id="contact-title" class="text-3xl font-bold mb-6" data-i18n="contact-title"></h2>
       <p id="contact-text" class="mb-6 text-lg dark:text-slate-300" data-i18n="contact-text"></p>
-      <a id="contact-button" href="mailto:alfonso.pisicchio@gmail.com" data-i18n="contact-button"
+      <a id="contact-button" href="mailto:alfonso.pisicchio@gmail.com" data-i18n="contact-button" 
+        aria-label="Send email to Alfonso Pisicchio"
         class="px-8 py-3 bg-emerald-500 text-black dark:text-white rounded-xl font-semibold hover:bg-emerald-400 transition-colors">
       </a>
     </div>
