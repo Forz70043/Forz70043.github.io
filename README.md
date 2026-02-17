@@ -1,4 +1,5 @@
 # Personal Portfolio - Alfonso
+[![CodeQL Advanced](https://github.com/Forz70043/Forz70043.github.io/actions/workflows/codeql.yml/badge.svg)](https://github.com/Forz70043/Forz70043.github.io/actions/workflows/codeql.yml)
 
 Welcome to the repository for my personal portfolio! 🎉  
 This project showcases my work, skills, and provides ways to connect with me professionally.
@@ -16,9 +17,9 @@ This portfolio was created to:
 
 ## 📊 Lighthouse Score
 
-![Performance](https://img.shields.io/badge/Performance-98-success?style=for-the-badge&logo=google-lighthouse&logoColor=white)
-![Accessibility](https://img.shields.io/badge/Accessibilità-100-success?style=for-the-badge&logo=google-lighthouse&logoColor=white)
-![Best Practices](https://img.shields.io/badge/Best_Practices-100-success?style=for-the-badge&logo=google-lighthouse&logoColor=white)
+![Performance](https://img.shields.io/badge/Performance-100-success?style=for-the-badge&logo=google-lighthouse&logoColor=white)
+![Accessibility](https://img.shields.io/badge/Accessibilità-91-success?style=for-the-badge&logo=google-lighthouse&logoColor=white)
+![Best Practices](https://img.shields.io/badge/Best_Practices-96-success?style=for-the-badge&logo=google-lighthouse&logoColor=white)
 ![SEO](https://img.shields.io/badge/SEO-100-success?style=for-the-badge&logo=google-lighthouse&logoColor=white)
 
 ---
@@ -42,38 +43,42 @@ This portfolio was created to:
 ## 🧰 Installation and Usage
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/Forz70043/Forz70043.github.io.git
-   cd Forz70043.github.io
-    Open the index.html file:
+   git clone https://github.com/Forz70043/Forz70043.github.io.git && cd Forz70043.github.io
+    
+2. **Open the index.html file:**
+
     You can open it directly in your browser or use a local server like Live Server for testing.
 
-🗂️ Project Structure
+## 🗂️ Project Structure
 
     css/: Contains stylesheets for layout and design.
+
     webfonts/: Stores font files required by the project.
+
     libs/: Includes external libraries (e.g., Font Awesome).
+
     index.html: The main file of the portfolio.
+
     README.md: Documentation for the project.
 
-🤝 Contributing
+## 🤝 Contributing
 
 Contributions are welcome! If you have suggestions or want to improve something, follow these steps:
 
-    Fork the repository.
-    Create a branch for your changes:
+- Fork the repository.
+- Create a branch for your changes:
+- git checkout -b feature-improvement
+- Submit a pull request describing your updates.
 
-    git checkout -b feature-improvement
-
-    Submit a pull request describing your updates.
-
-📧 Contact
+## 📧 Contact
 
     GitHub: Forz70043
 
-📜 License
+## 📜 License
 
 This project is licensed under the GPL-3.0. For more details, refer to the LICENSE file.
-💡 Notes
+
+## 💡 Notes
 
 If you encounter any issues or want to report a bug, feel free to open a ticket in the Issues section.
 
