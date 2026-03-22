@@ -1,0 +1,120 @@
+# Alfonso Pisicchio — Portfolio Completo
+
+> Questo documento contiene il contenuto integrale del portfolio di Alfonso Pisicchio,
+> pensato per essere consumato da sistemi AI, LLM e motori di ricerca basati su RAG.
+
+---
+
+## Identità
+
+- **Nome**: Alfonso Pisicchio
+- **Ruolo**: Backend Software Developer / System Integrator
+- **Sito web**: https://pisicchio.dev/
+- **GitHub**: https://github.com/Forz70043
+- **LinkedIn**: https://www.linkedin.com/in/alfonsopisicchio/
+- **Email**: alfonso.pisicchio@gmail.com
+
+---
+
+## About (IT)
+
+Sono uno sviluppatore software con una forte specializzazione nel backend e nell'integrazione tra sistemi.
+Mi occupo di progettare e implementare architetture web efficienti, sicure e scalabili — collegando diversi servizi, automatizzando processi e garantendo una comunicazione affidabile tra le piattaforme.
+
+## About (EN)
+
+I'm a backend software developer specialized in system integration and distributed architectures.
+I build robust, secure, and maintainable web applications — bridging services, APIs, and data flows to deliver high-performance solutions.
+
+---
+
+## Stack Tecnologico
+
+### Linguaggi di programmazione
+
+- JavaScript (ES6+)
+- PHP
+- Python (scripting)
+- Bash
+
+### Runtime & Framework
+
+- Node.js
+- Express.js
+- Symfony (PHP)
+- Magento 2 (PHP e-commerce)
+
+### Database
+
+- MySQL (relazionale)
+- MongoDB (NoSQL)
+
+### DevOps & Strumenti
+
+- Git
+- GitHub
+- BitBucket
+- Docker
+
+---
+
+## Progetti
+
+### 1. Portfolio Website
+- **Repository**: https://github.com/Forz70043/Forz70043.github.io
+- **URL Live**: https://pisicchio.dev/
+- **Descrizione (IT)**: Sito personale sviluppato con HTML, TailwindCSS e JavaScript. Include toggle dark/light mode, sezioni animate e Service Worker per il supporto PWA.
+- **Descrizione (EN)**: Personal website simply built with HTML, TailwindCSS and JavaScript. Includes dark/light mode toggle, Service Worker for PWA support.
+- **Tecnologie**: HTML5, TailwindCSS, JavaScript, Service Worker, PWA
+
+### 2. Dynamic VirtualHost
+- **Repository**: https://github.com/Forz70043/dynamicVH
+- **Descrizione (IT)**: Script Bash per la creazione di virtual host dinamici su sistema Ubuntu. Automatizza la configurazione di Apache/Nginx per ambienti di sviluppo locale.
+- **Descrizione (EN)**: Bash script for creating dynamic virtual hosts on Ubuntu. Automates Apache/Nginx configuration for local development environments.
+- **Tecnologie**: Bash, Linux, Apache, Nginx, Ubuntu
+
+### 3. Node API
+- **Repository**: https://github.com/Forz70043/node-api
+- **Descrizione (IT)**: Sistema di integrazioni API. Sviluppato con Node.js ed Express. Permette di orchestrare chiamate verso servizi esterni e gestire flussi di dati.
+- **Descrizione (EN)**: API integration system. Built with Node.js and Express. Orchestrates calls to external services and manages data flows.
+- **Tecnologie**: Node.js, Express.js, REST API, JSON
+
+### 4. Dev Toolkit (npm package)
+- **Repository**: https://github.com/Forz70043/dev-toolkit
+- **npm**: https://www.npmjs.com/package/dev-toolkit
+- **Descrizione (IT)**: Pacchetto npm con una raccolta di utilities e strumenti per lo sviluppo scritti in JavaScript.
+- **Descrizione (EN)**: A collection of utilities and tools for development written in JS published on npm.
+- **Tecnologie**: JavaScript, Node.js, npm
+
+---
+
+## Contatti
+
+Per collaborazioni, progetti o semplici curiosità:
+
+- **Email**: [alfonso.pisicchio@gmail.com](mailto:alfonso.pisicchio@gmail.com)
+- **GitHub**: https://github.com/Forz70043
+- **LinkedIn**: https://www.linkedin.com/in/alfonsopisicchio/
+
+---
+
+## Metadati tecnici del sito
+
+- **URL canonico**: https://pisicchio.dev/
+- **Sitemap**: https://pisicchio.dev/sitemap.xml
+- **Robots**: https://pisicchio.dev/robots.txt
+- **Manifest PWA**: https://pisicchio.dev/manifest.json
+- **Lingua principale**: inglese (con supporto italiano)
+- **Caratteristiche**: PWA, dark mode, responsive, multilingua (IT/EN), Service Worker
+
+---
+
+## Sezioni del sito
+
+| Sezione   | Anchor URL                        | Descrizione                        |
+|-----------|-----------------------------------|------------------------------------|
+| Hero      | https://pisicchio.dev/            | Presentazione e CTA principali     |
+| About     | https://pisicchio.dev/#about      | Profilo e descrizione professionale|
+| Projects  | https://pisicchio.dev/#projects   | Showcase dei progetti open source  |
+| Stack     | https://pisicchio.dev/#stack      | Tecnologie e strumenti utilizzati  |
+| Contact   | https://pisicchio.dev/#contact    | Modulo/link di contatto            |

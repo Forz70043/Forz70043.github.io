@@ -1,0 +1,39 @@
+# Alfonso Pisicchio — Backend Developer Portfolio
+
+> Backend software developer specializzato in system integration e architetture distribuite.
+> Costruisce applicazioni web robuste, sicure e manutenibili — collegando servizi, API e flussi di dati per soluzioni ad alte prestazioni.
+
+## Sito
+
+- [Portfolio](https://pisicchio.dev/): Homepage del portfolio di Alfonso Pisicchio.
+- [About](https://pisicchio.dev/#about): Presentazione personale e profilo professionale.
+- [Progetti](https://pisicchio.dev/#projects): Elenco dei progetti open source sviluppati.
+- [Stack tecnologico](https://pisicchio.dev/#stack): Tecnologie e linguaggi utilizzati.
+- [Contatti](https://pisicchio.dev/#contact): Informazioni per contattare Alfonso.
+
+## Chi è Alfonso Pisicchio
+
+Alfonso Pisicchio è uno sviluppatore software con una forte specializzazione nel backend e nell'integrazione tra sistemi.
+Si occupa di progettare e implementare architetture web efficienti, sicure e scalabili — collegando diversi servizi, automatizzando processi e garantendo una comunicazione affidabile tra le piattaforme.
+
+## Progetti
+
+- [Portfolio Website](https://github.com/Forz70043/Forz70043.github.io): Sito personale costruito con HTML, TailwindCSS e JavaScript puro. Include dark/light mode, Service Worker per PWA e animazioni.
+- [Dynamic VirtualHost](https://github.com/Forz70043/dynamicVH): Script Bash per la creazione automatica di virtual host dinamici su Ubuntu.
+- [Node API](https://github.com/Forz70043/node-api): Sistema di integrazioni API sviluppato con Node.js ed Express.
+- [Dev Toolkit](https://github.com/Forz70043/dev-toolkit): Pacchetto npm con una raccolta di utilities e strumenti per lo sviluppo scritti in JavaScript.
+
+## Stack Tecnologico
+
+JavaScript, Node.js, PHP, Python, MySQL, MongoDB, Bash, Symfony, Magento 2, Git, GitHub, BitBucket, Docker, Express.js
+
+## Contatti
+
+- Email: [alfonso.pisicchio@gmail.com](mailto:alfonso.pisicchio@gmail.com)
+- GitHub: [https://github.com/Forz70043](https://github.com/Forz70043)
+- LinkedIn: [https://www.linkedin.com/in/alfonsopisicchio/](https://www.linkedin.com/in/alfonsopisicchio/)
+
+## Optional
+
+- [CV / Resume](https://pisicchio.dev/AlfonsoPisicchio.pdf): Curriculum Vitae di Alfonso Pisicchio in formato PDF.
+- [Sitemap](https://pisicchio.dev/sitemap.xml): Mappa XML del sito.
