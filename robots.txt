@@ -19,3 +19,52 @@ Sitemap: https://pisicchio.dev/sitemap.xml
 
 # ✅ Canonical domain (helps avoid duplicate content)
 Host: pisicchio.dev
+
+# ------------------------------------------
+# 🤖 AI & LLM Crawlers — Explicit Allow
+# Ref: https://llmstxt.org/
+# ------------------------------------------
+
+# OpenAI — ChatGPT / GPT-4o
+# User-agent: GPTBot
+# Allow: /
+
+# Anthropic — Claude
+# User-agent: ClaudeBot
+# Allow: /
+# User-agent: anthropic-ai
+# Allow: /
+
+# Google — Gemini / AI Overviews
+# User-agent: Google-Extended
+# Allow: /
+
+# Perplexity AI
+# User-agent: PerplexityBot
+# Allow: /
+
+# Meta — Llama
+# User-agent: meta-externalagent
+# Allow: /
+# User-agent: FacebookBot
+# Allow: /
+
+# Microsoft — Copilot / Bing AI
+# User-agent: Bingbot
+# Allow: /
+
+# Common Crawl (usato da molti LLM per training)
+# User-agent: CCBot
+# Allow: /
+
+# Cohere AI
+# User-agent: cohere-ai
+# Allow: /
+
+# Apple — Intelligent Search
+# User-agent: Applebot-Extended
+# Allow: /
+
+# LLMs.txt location (standard RAG per LLM)
+# https://pisicchio.dev/llms.txt
+# https://pisicchio.dev/llms-full.txt
