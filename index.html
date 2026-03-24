@@ -4,13 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio | Alfonso Pisicchio</title>
+  <!-- 🔒 Security headers -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; manifest-src 'self'; worker-src 'self'; form-action 'self'; base-uri 'self';">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <link href="/libs/css/style.css" rel="stylesheet">
   <link rel="manifest" href="manifest.json">
   <meta name="author" content="Alfonso Pisicchio" />
   <meta name="theme-color" content="#2563eb">
   <meta name="description" content="Alfonso Pisicchio Portfolio, Backend developer. System integration, Node.js, PHP. Portfolio di Alfonso Pisicchio.">
   <meta name="keywords" content="developer, portfolio, php, mysql, javascript, node, express, bash, system integration, mongodb, docker, programmer, tech-leader" />
-  <meta name="author" content="Alfonso Pisicchio" />
   <link rel="canonical" href="https://pisicchio.dev/" />
   <!-- 🤖 LLMs.txt — RAG for AI agents (https://llmstxt.org/) -->
   <link rel="alternate llms" type="text/plain" href="https://pisicchio.dev/llms.txt" title="LLMs.txt summary" />
@@ -35,7 +37,7 @@
       "jobTitle": "Software Developer",
       "sameAs": [
         "https://github.com/Forz70043",
-        "https://www.linkedin.com/in/alfonsopisicchio/",
+        "https://www.linkedin.com/in/alfonsopisicchio/"
       ]
     }
   </script>
@@ -101,6 +103,7 @@
           data-i18n="hero-cta-cv"
           href="AlfonsoPisicchio.pdf"
           target="_blank"
+          rel="noopener noreferrer"
           aria-label="Download CV"
           class="w-full md:w-auto px-6 py-3 bg-gray-800 text-emerald-400 rounded-xl font-semibold shadow hover:bg-gray-700 border border-emerald-500 transition-colors text-center"
         >
