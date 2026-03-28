@@ -5,8 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio | Alfonso Pisicchio</title>
   <!-- 🔒 Security headers -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://*.clarity.ms 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://c.bing.com https://www.clarity.ms; font-src 'self'; connect-src 'self' https://*.clarity.ms https://c.bing.com; manifest-src 'self'; worker-src 'self' blob:; form-action 'self'; base-uri 'self';">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://*.clarity.ms 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; img-src 'self' data: https://c.bing.com https://www.clarity.ms; font-src 'self' https://cdn.jsdelivr.net; connect-src 'self' https://*.clarity.ms https://c.bing.com; manifest-src 'self'; worker-src 'self' blob:; form-action 'self'; base-uri 'self';">
   <meta name="referrer" content="strict-origin-when-cross-origin">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="96x96" href="/libs/image/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/libs/image/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/libs/image/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/libs/image/apple-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/libs/image/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/libs/image/apple-icon-120x120.png">
+  <meta name="msapplication-TileImage" content="/libs/image/ms-icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#0a0f1c">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <link href="/libs/css/style.css" rel="stylesheet">
   <link rel="manifest" href="manifest.json">
   <meta name="author" content="Alfonso Pisicchio" />
@@ -127,7 +137,7 @@
       <div class="grid md:grid-cols-3 gap-8">
         <!-- Project 1 -->
         <div class="bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition p-4">
-          <img src="/libs/image/AP-dev1.webp" alt="Portfolio Website" class="rounded-lg mb-4">
+          <img src="/libs/image/AP-dev1.webp" alt="Portfolio Website" class="rounded-lg mb-4" loading="lazy">
           <h3 data-i18n="project1-title" class="font-bold text-xl mb-2"></h3>
           <p data-i18n="project1-desc" class="text-gray-600 dark:text-gray-300 mb-4"></p>
           <a data-i18n="project1-link-text" href="https://github.com/Forz70043/Forz70043.github.io" 
@@ -137,7 +147,7 @@
 
         <!-- Project 4 -->
         <div class="bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition p-4">
-          <img src="/libs/image/dev-kit.gif" alt="Dev-kit Developer" class="rounded-lg mb-4">
+          <img src="/libs/image/dev-kit.gif" alt="Dev-kit Developer" class="rounded-lg mb-4" loading="lazy">
           <h3 data-i18n="project4-title" class="font-bold text-xl mb-2"></h3>
           <p data-i18n="project4-desc" class="text-gray-600 dark:text-gray-300 mb-4"></p>
           <a data-i18n="project4-link-text" href="https://github.com/Forz70043/dev-toolkit" 
@@ -147,7 +157,7 @@
 
         <!-- Project 2 -->
         <div class="bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition p-4">
-          <img src="/libs/image/dynamicVH.webp" alt="dynamicVH" class="rounded-lg mb-4">
+          <img src="/libs/image/dynamicVH.webp" alt="dynamicVH" class="rounded-lg mb-4" loading="lazy">
           <h3 data-i18n="project2-title" class="font-bold text-xl mb-2"></h3>
           <p data-i18n="project2-desc" class="text-gray-600 dark:text-gray-300 mb-4"></p>
           <a data-i18n="project2-link-text" href="https://github.com/Forz70043/dynamicVH" 
@@ -156,7 +166,7 @@
 
         <!-- Project 3 -->
         <div class="bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition p-4">
-          <img src="/libs/image/node-api.webp" alt="Node API" class="rounded-lg mb-4">
+          <img src="/libs/image/node-api.webp" alt="Node API" class="rounded-lg mb-4" loading="lazy">
           <h3 data-i18n="project3-title" class="font-bold text-xl mb-2"></h3>
           <p data-i18n="project3-desc" class="text-gray-600 dark:text-gray-300 mb-4"></p>
           <a data-i18n="project3-link-text" href="https://github.com/Forz70043/node-api" 
@@ -165,7 +175,7 @@
 
         <!-- Project 5 - Bridge -->
         <div class="bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition p-4">
-          <img src="/libs/image/wip.gif" alt="Bridge WSL Manager" class="rounded-lg mb-4">
+          <img src="/libs/image/wip.gif" alt="Bridge WSL Manager" class="rounded-lg mb-4" loading="lazy">
           <h3 data-i18n="project5-title" class="font-bold text-xl mb-2"></h3>
           <p data-i18n="project5-desc" class="text-gray-600 dark:text-gray-300 mb-4"></p>
           <a data-i18n="project5-link-text" href="https://github.com/Forz70043/bridge" 
@@ -174,7 +184,7 @@
 
         <!-- Project 6 - ShoppingList -->
         <div class="bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition p-4">
-          <img src="/libs/image/wip.gif" alt="Shopping List API" class="rounded-lg mb-4">
+          <img src="/libs/image/wip.gif" alt="Shopping List API" class="rounded-lg mb-4" loading="lazy">
           <h3 data-i18n="project6-title" class="font-bold text-xl mb-2"></h3>
           <p data-i18n="project6-desc" class="text-gray-600 dark:text-gray-300 mb-4"></p>
           <a data-i18n="project6-link-text" href="https://github.com/Forz70043/shoppingList" 
@@ -183,7 +193,7 @@
 
         <!-- Project 9 - Git Prompt -->
         <div class="bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition p-4">
-          <img src="/libs/image/wip.gif" alt="Git Prompt" class="rounded-lg mb-4">
+          <img src="/libs/image/wip.gif" alt="Git Prompt" class="rounded-lg mb-4" loading="lazy">
           <h3 data-i18n="project9-title" class="font-bold text-xl mb-2"></h3>
           <p data-i18n="project9-desc" class="text-gray-600 dark:text-gray-300 mb-4"></p>
           <a data-i18n="project9-link-text" href="https://github.com/Forz70043/git-prompt" 
@@ -197,17 +207,54 @@
   <section id="stack" class="container mx-auto py-20 px-6 transition-colors duration-300">
     <h2 id="stack-title" data-i18n="stack-title" class="text-3xl font-bold mb-12"></h2>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors">JavaScript</div>
-      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors">Node.js</div>
-      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors">PHP</div>
-      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors">Python Script</div>
-      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors">MySQL</div>
-      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors">MongoDB</div>
-      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors">Bash</div>
-      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors">Symfony</div>
-      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors">Magento 2</div>
-      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors">Git</div>
-      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors">GitHub - BitBucket</div>
+      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors flex flex-col items-center gap-3">
+        <i class="devicon-javascript-plain colored text-4xl"></i>
+        <span>JavaScript</span>
+      </div>
+      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors flex flex-col items-center gap-3">
+        <i class="devicon-nodejs-plain colored text-4xl"></i>
+        <span>Node.js</span>
+      </div>
+      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors flex flex-col items-center gap-3">
+        <i class="devicon-php-plain colored text-4xl"></i>
+        <span>PHP</span>
+      </div>
+      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors flex flex-col items-center gap-3">
+        <i class="devicon-python-plain colored text-4xl"></i>
+        <span>Python</span>
+      </div>
+      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors flex flex-col items-center gap-3">
+        <i class="devicon-mysql-plain colored text-4xl"></i>
+        <span>MySQL</span>
+      </div>
+      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors flex flex-col items-center gap-3">
+        <i class="devicon-mongodb-plain colored text-4xl"></i>
+        <span>MongoDB</span>
+      </div>
+      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors flex flex-col items-center gap-3">
+        <i class="devicon-bash-plain text-4xl text-gray-800 dark:text-gray-100"></i>
+        <span>Bash</span>
+      </div>
+      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors flex flex-col items-center gap-3">
+        <i class="devicon-symfony-original text-4xl text-gray-800 dark:text-gray-100"></i>
+        <span>Symfony</span>
+      </div>
+      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors flex flex-col items-center gap-3">
+        <i class="devicon-magento-original colored text-4xl"></i>
+        <span>Magento 2</span>
+      </div>
+      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors flex flex-col items-center gap-3">
+        <i class="devicon-git-plain colored text-4xl"></i>
+        <span>Git</span>
+      </div>
+      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors flex flex-col items-center gap-3">
+        <i class="devicon-github-original text-4xl text-gray-800 dark:text-gray-100"></i>
+        <span>GitHub</span>
+      </div>
+      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors flex flex-col items-center gap-3">
+        <i class="devicon-bitbucket-original colored text-4xl"></i>
+        <span>Bitbucket</span>
+      </div>
     </div>
   </section>
 
