@@ -29,7 +29,7 @@ JavaScript, Node.js, PHP, Python, MySQL, MongoDB, Bash, Symfony, Magento 2, Git,
 
 ## Contatti
 
-- Email: [alfonso.pisicchio@gmail.com](mailto:alfonso.pisicchio@gmail.com)
+- Contatti: https://pisicchio.dev/#contact
 - GitHub: [https://github.com/Forz70043](https://github.com/Forz70043)
 - LinkedIn: [https://www.linkedin.com/in/alfonsopisicchio/](https://www.linkedin.com/in/alfonsopisicchio/)
 

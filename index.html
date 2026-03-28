@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio | Alfonso Pisicchio</title>
   <!-- 🔒 Security headers -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; manifest-src 'self'; worker-src 'self'; form-action 'self'; base-uri 'self';">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://*.clarity.ms 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://c.bing.com https://www.clarity.ms; font-src 'self'; connect-src 'self' https://*.clarity.ms https://c.bing.com; manifest-src 'self'; worker-src 'self' blob:; form-action 'self'; base-uri 'self';">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <link href="/libs/css/style.css" rel="stylesheet">
   <link rel="manifest" href="manifest.json">
@@ -16,8 +15,8 @@
   <meta name="keywords" content="developer, portfolio, php, mysql, javascript, node, express, bash, system integration, mongodb, docker, programmer, tech-leader" />
   <link rel="canonical" href="https://pisicchio.dev/" />
   <!-- 🤖 LLMs.txt — RAG for AI agents (https://llmstxt.org/) -->
-  <link rel="llms" type="text/plain" href="https://pisicchio.dev/llms.txt" title="LLMs.txt summary" />
-  <link rel="llms-full" type="text/plain" href="https://pisicchio.dev/llms-full.txt" title="LLMs full content" />
+  <link rel="alternate llms" type="text/plain" href="https://pisicchio.dev/llms.txt" title="LLMs.txt summary" />
+  <link rel="alternate llms-full" type="text/plain" href="https://pisicchio.dev/llms-full.txt" title="LLMs full content" />
   <!-- Open Graph -->
   <meta property="og:title" content="Alfonso Pisicchio - Portfolio" />
   <meta property="og:description" content="Alfonso Pisicchio Portfolio, Backend developer. System integration, Node.js, PHP. Portfolio di Alfonso Pisicchio." />
@@ -42,6 +41,8 @@
       ]
     }
   </script>
+  <!-- Clarity Analytics -->
+  <script src="/libs/js/clarity.js"></script>
 </head>
 <body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-sans transition-colors duration-300">
   
