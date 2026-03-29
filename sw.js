@@ -34,16 +34,25 @@ self.addEventListener('activate', event => {
 });
 
 self.addEventListener('fetch', event => {
-  const url = event.request.url;
+  const { request } = event;
+  const url = request.url;
+
+  if (request.method !== 'GET') return;
 
   // CDN resources: network-first, fallback to cache
   if (CDN_ORIGINS.some(origin => url.startsWith(origin))) {
     event.respondWith(
-      fetch(event.request).then(response => {
-        const clone = response.clone();
-        caches.open(CDN_CACHE_NAME).then(cache => cache.put(event.request, clone));
+      fetch(request).then(response => {
+        if (response.ok) {
+          const clone = response.clone();
+          caches.open(CDN_CACHE_NAME).then(cache => cache.put(request, clone));
+        }
         return response;
-      }).catch(() => caches.match(event.request))
+      }).catch(() =>
+        caches.match(request).then(cached =>
+          cached || new Response('Offline', { status: 503, statusText: 'Service Unavailable' })
+        )
+      )
     );
     return;
   }
@@ -51,7 +60,8 @@ self.addEventListener('fetch', event => {
   // Same-origin: cache-first
   if (url.startsWith(self.location.origin)) {
     event.respondWith(
-      caches.match(event.request).then(response => response || fetch(event.request))
+      caches.match(request).then(response => response || fetch(request))
+        .catch(() => new Response('Offline', { status: 503, statusText: 'Service Unavailable' }))
     );
   }
 });
