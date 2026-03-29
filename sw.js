@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alfonso-pisicchio-cache-v2';
+const CACHE_NAME = 'alfonso-pisicchio-cache-v3';
 const FILES_TO_CACHE = [
   './index.html',
   './libs/css/style.css',
@@ -13,6 +13,11 @@ const FILES_TO_CACHE = [
   './libs/image/dev-kit.gif',
 ];
 
+const CDN_CACHE_NAME = 'cdn-cache-v1';
+const CDN_ORIGINS = [
+  'https://cdn.jsdelivr.net',
+];
+
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => cache.addAll(FILES_TO_CACHE))
@@ -20,11 +25,30 @@ self.addEventListener('install', event => {
 });
 
 self.addEventListener('activate', event => {
-  event.waitUntil(self.clients.claim());
+  event.waitUntil(
+    caches.keys().then(keys =>
+      Promise.all(keys.filter(k => k !== CACHE_NAME && k !== CDN_CACHE_NAME).map(k => caches.delete(k)))
+    ).then(() => self.clients.claim())
+  );
 });
 
 self.addEventListener('fetch', event => {
-  if (event.request.url.startsWith(self.location.origin)) {
+  const url = event.request.url;
+
+  // CDN resources: network-first, fallback to cache
+  if (CDN_ORIGINS.some(origin => url.startsWith(origin))) {
+    event.respondWith(
+      fetch(event.request).then(response => {
+        const clone = response.clone();
+        caches.open(CDN_CACHE_NAME).then(cache => cache.put(event.request, clone));
+        return response;
+      }).catch(() => caches.match(event.request))
+    );
+    return;
+  }
+
+  // Same-origin: cache-first
+  if (url.startsWith(self.location.origin)) {
     event.respondWith(
       caches.match(event.request).then(response => response || fetch(event.request))
     );
