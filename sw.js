@@ -1,4 +1,4 @@
-const CACHE_NAME = 'alfonso-pisicchio-cache-v1';
+const CACHE_NAME = 'alfonso-pisicchio-cache-v2';
 const FILES_TO_CACHE = [
   './index.html',
   './libs/css/style.css',
@@ -24,7 +24,9 @@ self.addEventListener('activate', event => {
 });
 
 self.addEventListener('fetch', event => {
-  event.respondWith(
-    caches.match(event.request).then(response => response || fetch(event.request))
-  );
+  if (event.request.url.startsWith(self.location.origin)) {
+    event.respondWith(
+      caches.match(event.request).then(response => response || fetch(event.request))
+    );
+  }
 });
