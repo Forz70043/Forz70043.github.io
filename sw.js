@@ -6,6 +6,7 @@ const FILES_TO_CACHE = [
   './libs/js/lang.js',
   './libs/js/menu.js',
   './libs/js/theme-toggle.js',
+  './libs/js/projects.js',
   './AlfonsoPisicchio.pdf',
   './libs/image/AP-dev1.webp',
   './libs/image/dynamicVH.webp',
