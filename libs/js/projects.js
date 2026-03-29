@@ -6,6 +6,7 @@
 const projects = [
   {
     id: 'project1',
+    name: 'Portfolio Website',
     image: '/libs/image/AP-dev1.webp',
     alt: 'Screenshot of Alfonso Pisicchio\'s portfolio website built with HTML, TailwindCSS and JavaScript',
     github: 'https://github.com/Forz70043/Forz70043.github.io',
@@ -17,6 +18,7 @@ const projects = [
   },
   {
     id: 'project4',
+    name: 'Dev-Toolkit',
     image: '/libs/image/dev-kit.gif',
     alt: 'Terminal demo of the dev-toolkit npm package showing CLI utilities in action',
     github: 'https://github.com/Forz70043/dev-toolkit',
@@ -27,6 +29,7 @@ const projects = [
   },
   {
     id: 'project2',
+    name: 'DynamicVH',
     image: '/libs/image/dynamicVH.webp',
     alt: 'Bash script output for creating dynamic Apache virtual hosts on Ubuntu',
     github: 'https://github.com/Forz70043/dynamicVH',
@@ -37,6 +40,7 @@ const projects = [
   },
   {
     id: 'project3',
+    name: 'Node API',
     image: '/libs/image/node-api.webp',
     alt: 'Architecture diagram of a REST API integration system built with Node.js and Express',
     github: 'https://github.com/Forz70043/node-api',
@@ -47,7 +51,8 @@ const projects = [
   },
   {
     id: 'project5',
-    image: '/libs/image/wip.gif',
+    name: 'Bridge',
+    image: '/libs/image/BridgeGIF.gif',
     alt: 'Bridge — native desktop app for managing WSL distributions on Windows, work in progress',
     github: 'https://github.com/Forz70043/bridge',
     stack: [
@@ -57,7 +62,8 @@ const projects = [
   },
   {
     id: 'project6',
-    image: '/libs/image/wip.gif',
+    name: 'Shopping List API',
+    image: '/libs/image/GroceryListGIF.gif',
     alt: 'Shopping List REST API with JWT authentication and CRUD operations, work in progress',
     github: 'https://github.com/Forz70043/shoppingList',
     stack: [
@@ -68,7 +74,8 @@ const projects = [
   },
   {
     id: 'project9',
-    image: '/libs/image/wip.gif',
+    name: 'Git Prompt',
+    image: '/libs/image/GitPromptGIF.gif',
     alt: 'Git Prompt — ultra-fast Git branch indicator for Linux terminal written in Go, work in progress',
     github: 'https://github.com/Forz70043/git-prompt',
     stack: [
