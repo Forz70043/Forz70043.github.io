@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "npx serve . -l 3000",
+    "start": "serve . -l 3000",
     "dev": "npx @tailwindcss/cli -i ./input.css -o ./libs/css/style.css --watch",
     "build:css": "npx @tailwindcss/cli -i ./input.css -o ./libs/css/style.css --minify"
   },
@@ -11,6 +11,7 @@
     "@tailwindcss/cli": "^4.1.13"
   },
   "devDependencies": {
+    "serve": "^14.2.6",
     "tailwindcss": "^4.1.13"
   }
 }
