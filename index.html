@@ -4,9 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio | Alfonso Pisicchio</title>
-  <!-- 🔒 Security headers -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://*.clarity.ms 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://c.bing.com https://www.clarity.ms; font-src 'self'; connect-src 'self' https://*.clarity.ms https://c.bing.com; manifest-src 'self'; worker-src 'self' blob:; form-action 'self'; base-uri 'self';">
+  <!-- Security headers -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://*.clarity.ms 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; img-src 'self' data: https://c.bing.com https://www.clarity.ms; font-src 'self' https://cdn.jsdelivr.net; connect-src 'self' https://*.clarity.ms https://c.bing.com; manifest-src 'self'; worker-src 'self' blob:; form-action 'self'; base-uri 'self';">
   <meta name="referrer" content="strict-origin-when-cross-origin">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="96x96" href="/libs/image/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/libs/image/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/libs/image/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/libs/image/apple-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/libs/image/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/libs/image/apple-icon-120x120.png">
+  <meta name="msapplication-TileImage" content="/libs/image/ms-icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#0a0f1c">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
   <link href="/libs/css/style.css" rel="stylesheet">
   <link rel="manifest" href="manifest.json">
   <meta name="author" content="Alfonso Pisicchio" />
@@ -35,6 +45,8 @@
       "name": "Alfonso Pisicchio",
       "url": "https://pisicchio.dev/",
       "jobTitle": "Software Developer",
+      "knowsAbout": ["Backend Development", "System Integration", "Node.js", "PHP", "MySQL", "MongoDB", "Docker", "Bash", "REST API", "Symfony", "Magento 2"],
+      "mainEntityOfPage": "https://pisicchio.dev/AlfonsoPisicchio.pdf",
       "sameAs": [
         "https://github.com/Forz70043",
         "https://www.linkedin.com/in/alfonsopisicchio/"
@@ -58,11 +70,18 @@
       <!-- MENU LINKS (desktop) -->
       <ul id="menu" class="hidden md:flex space-x-6 items-center">
         <li><a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-about" aria-label="About section"></a></li>
+        <li><a href="#experience" class="hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-experience" aria-label="Experience section"></a></li>
         <li><a href="#projects" class="hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-projects" aria-label="Projects section"></a></li>
         <li><a href="#stack" class="hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-stack" aria-label="Stack section"></a></li>
         <li><a href="#contact" class="hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-contact" aria-label="Contact section"></a></li>
         <li>
           <button id="theme-toggle" class="ml-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white transition-colors duration-300">🌙</button>
+        </li>
+        <li class="hidden flex gap-1 ml-2" id="lang-selector-desktop">
+          <button data-lang="it" class="text-xs px-2 py-1 rounded bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white transition-all" aria-label="Italiano">IT</button>
+          <button data-lang="en" class="text-xs px-2 py-1 rounded bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white transition-all" aria-label="English">EN</button>
+          <button data-lang="fr" class="text-xs px-2 py-1 rounded bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white transition-all" aria-label="Français">FR</button>
+          <button data-lang="es" class="text-xs px-2 py-1 rounded bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white transition-all" aria-label="Español">ES</button>
         </li>
       </ul>
     </nav>
@@ -70,12 +89,19 @@
     <!-- MENU MOBILE -->
     <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 px-6 py-4 space-y-4 shadow">
       <a href="#about" class="block hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-about" aria-label="About section"></a>
+      <a href="#experience" class="block hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-experience" aria-label="Experience section"></a>
       <a href="#projects" class="block hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-projects" aria-label="Projects section"></a>
       <a href="#stack" class="block hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-stack" aria-label="Stack section"></a>
       <a href="#contact" class="block hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-contact" aria-label="Contact section"></a>
       <button id="theme-toggle-mobile" aria-label="Toggle dark mode"
         class="mt-4 p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white transition-colors duration-300">🌙
       </button>
+      <div class="hidden flex gap-2 mt-3" id="lang-selector-mobile">
+        <button data-lang="it" class="text-xs px-2 py-1 rounded bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white transition-all" aria-label="Italiano">IT</button>
+        <button data-lang="en" class="text-xs px-2 py-1 rounded bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white transition-all" aria-label="English">EN</button>
+        <button data-lang="fr" class="text-xs px-2 py-1 rounded bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white transition-all" aria-label="Français">FR</button>
+        <button data-lang="es" class="text-xs px-2 py-1 rounded bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white transition-all" aria-label="Español">ES</button>
+      </div>
     </div>
   </header>
 
@@ -115,80 +141,148 @@
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="container mx-auto py-20 px-6 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100 transition-colors duration-300">
+  <section id="about" class="fade-in container mx-auto py-20 px-6 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100 transition-colors duration-300">
     <h2 id="about-title" data-i18n="about-title" class="text-3xl font-bold mb-6"></h2>
     <p id="about-text" data-i18n="about-text" class="max-w-3xl text-lg leading-relaxed"></p>
   </section>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="bg-gray-100 dark:bg-gray-900 py-20 px-6 transition-colors duration-300">
+  <!-- EXPERIENCE TIMELINE -->
+  <section id="experience" class="fade-in bg-gray-100 dark:bg-gray-900 py-20 px-6 transition-colors duration-300">
     <div class="container mx-auto">
-      <h2 id="projects-title" data-i18n="projects-title" class="text-3xl font-bold mb-12"></h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Project 1 -->
-        <div class="bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition p-4">
-          <img src="/libs/image/AP-dev1.webp" alt="Portfolio Website" class="rounded-lg mb-4">
-          <h3 data-i18n="project1-title" class="font-bold text-xl mb-2"></h3>
-          <p data-i18n="project1-desc" class="text-gray-600 dark:text-gray-300 mb-4"></p>
-          <a data-i18n="project1-link-text" href="https://github.com/Forz70043/Forz70043.github.io" 
-            class="text-blue-600 dark:text-blue-400 hover:underline"
-            aria-label="View project 1 on GitHub"></a>
+      <h2 data-i18n="experience-title" class="text-3xl font-bold mb-12"></h2>
+      <div class="relative border-l-2 border-emerald-400 ml-4 md:ml-8">
+
+        <!-- EXP 1 -->
+        <div class="mb-10 ml-8 relative">
+          <span class="absolute -left-[2.55rem] top-1 w-4 h-4 bg-emerald-400 rounded-full border-2 border-white dark:border-gray-900"></span>
+          <span data-i18n="exp1-period" class="text-sm text-emerald-500 font-semibold"></span>
+          <h3 class="text-xl font-bold mt-1">
+            <span data-i18n="exp1-role"></span>
+            <span class="text-gray-500 dark:text-gray-400 font-normal"> — </span>
+            <span data-i18n="exp1-company" class="text-gray-500 dark:text-gray-400 font-normal"></span>
+          </h3>
+          <p data-i18n="exp1-desc" class="mt-2 text-gray-600 dark:text-gray-300 leading-relaxed"></p>
         </div>
 
-        <!-- Project 4 -->
-        <div class="bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition p-4">
-          <img src="/libs/image/dev-kit.gif" alt="Dev-kit Developer" class="rounded-lg mb-4">
-          <h3 data-i18n="project4-title" class="font-bold text-xl mb-2"></h3>
-          <p data-i18n="project4-desc" class="text-gray-600 dark:text-gray-300 mb-4"></p>
-          <a data-i18n="project4-link-text" href="https://github.com/Forz70043/dev-toolkit" 
-            class="text-blue-600 dark:text-blue-400 hover:underline" aria-label="View project 4 on GitHub">
-          </a>
+        <!-- EXP 2 -->
+        <div class="mb-10 ml-8 relative">
+          <span class="absolute -left-[2.55rem] top-1 w-4 h-4 bg-emerald-400 rounded-full border-2 border-white dark:border-gray-900"></span>
+          <span data-i18n="exp2-period" class="text-sm text-emerald-500 font-semibold"></span>
+          <h3 class="text-xl font-bold mt-1">
+            <span data-i18n="exp2-role"></span>
+            <span class="text-gray-500 dark:text-gray-400 font-normal"> — </span>
+            <span data-i18n="exp2-company" class="text-gray-500 dark:text-gray-400 font-normal"></span>
+          </h3>
+          <p data-i18n="exp2-desc" class="mt-2 text-gray-600 dark:text-gray-300 leading-relaxed"></p>
         </div>
 
-        <!-- Project 2 -->
-        <div class="bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition p-4">
-          <img src="/libs/image/dynamicVH.webp" alt="dynamicVH" class="rounded-lg mb-4">
-          <h3 data-i18n="project2-title" class="font-bold text-xl mb-2"></h3>
-          <p data-i18n="project2-desc" class="text-gray-600 dark:text-gray-300 mb-4"></p>
-          <a data-i18n="project2-link-text" href="https://github.com/Forz70043/dynamicVH" 
-          class="text-blue-600 dark:text-blue-400 hover:underline" aria-label="View project 2 on GitHub"></a>
+        <!-- EXP 3 -->
+        <div class="mb-10 ml-8 relative">
+          <span class="absolute -left-[2.55rem] top-1 w-4 h-4 bg-emerald-400 rounded-full border-2 border-white dark:border-gray-900"></span>
+          <span data-i18n="exp3-period" class="text-sm text-emerald-500 font-semibold"></span>
+          <h3 class="text-xl font-bold mt-1">
+            <span data-i18n="exp3-role"></span>
+            <span class="text-gray-500 dark:text-gray-400 font-normal"> — </span>
+            <span data-i18n="exp3-company" class="text-gray-500 dark:text-gray-400 font-normal"></span>
+          </h3>
+          <p data-i18n="exp3-desc" class="mt-2 text-gray-600 dark:text-gray-300 leading-relaxed"></p>
         </div>
 
-        <!-- Project 3 -->
-        <div class="bg-white dark:bg-gray-800 rounded-xl shadow hover:shadow-lg transition p-4">
-          <img src="/libs/image/node-api.webp" alt="Node API" class="rounded-lg mb-4">
-          <h3 data-i18n="project3-title" class="font-bold text-xl mb-2"></h3>
-          <p data-i18n="project3-desc" class="text-gray-600 dark:text-gray-300 mb-4"></p>
-          <a data-i18n="project3-link-text" href="https://github.com/Forz70043/node-api" 
-          class="text-blue-600 dark:text-blue-400 hover:underline" aria-label="View project 3 on GitHub"></a>
+        <!-- EXP 4 -->
+        <div class="mb-10 ml-8 relative">
+          <span class="absolute -left-[2.55rem] top-1 w-4 h-4 bg-emerald-400 rounded-full border-2 border-white dark:border-gray-900"></span>
+          <span data-i18n="exp4-period" class="text-sm text-emerald-500 font-semibold"></span>
+          <h3 class="text-xl font-bold mt-1">
+            <span data-i18n="exp4-role"></span>
+            <span class="text-gray-500 dark:text-gray-400 font-normal"> — </span>
+            <span data-i18n="exp4-company" class="text-gray-500 dark:text-gray-400 font-normal"></span>
+          </h3>
+          <p data-i18n="exp4-desc" class="mt-2 text-gray-600 dark:text-gray-300 leading-relaxed"></p>
         </div>
+
       </div>
     </div>
   </section>
 
+  <!-- PROJECTS -->
+  <section id="projects" class="fade-in bg-gray-100 dark:bg-gray-900 py-20 px-6 transition-colors duration-300">
+    <div class="container mx-auto">
+      <h2 id="projects-title" data-i18n="projects-title" class="text-3xl font-bold mb-12"></h2>
+      <div id="projects-grid" class="grid md:grid-cols-3 gap-8"></div>
+    </div>
+  </section>
+
   <!-- STACK -->
-  <section id="stack" class="container mx-auto py-20 px-6 transition-colors duration-300">
+  <section id="stack" class="fade-in container mx-auto py-20 px-6 transition-colors duration-300">
     <h2 id="stack-title" data-i18n="stack-title" class="text-3xl font-bold mb-12"></h2>
     <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors">JavaScript</div>
-      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors">Node.js</div>
-      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors">PHP</div>
-      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors">Python Script</div>
-      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors">MySQL</div>
-      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors">MongoDB</div>
-      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors">Bash</div>
-      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors">Symfony</div>
-      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors">Magento 2</div>
-      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors">Git</div>
-      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors">GitHub - BitBucket</div>
+      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors flex flex-col items-center gap-3">
+        <i class="devicon-javascript-plain colored text-4xl"></i>
+        <span>JavaScript</span>
+      </div>
+      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors flex flex-col items-center gap-3">
+        <i class="devicon-nodejs-plain colored text-4xl"></i>
+        <span>Node.js</span>
+      </div>
+      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors flex flex-col items-center gap-3">
+        <i class="devicon-php-plain colored text-4xl"></i>
+        <span>PHP</span>
+      </div>
+      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors flex flex-col items-center gap-3">
+        <i class="devicon-python-plain colored text-4xl"></i>
+        <span>Python</span>
+      </div>
+      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors flex flex-col items-center gap-3">
+        <i class="devicon-mysql-plain colored text-4xl"></i>
+        <span>MySQL</span>
+      </div>
+      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors flex flex-col items-center gap-3">
+        <i class="devicon-mongodb-plain colored text-4xl"></i>
+        <span>MongoDB</span>
+      </div>
+      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors flex flex-col items-center gap-3">
+        <i class="devicon-bash-plain text-4xl text-gray-800 dark:text-gray-100"></i>
+        <span>Bash</span>
+      </div>
+      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors flex flex-col items-center gap-3">
+        <i class="devicon-symfony-original text-4xl text-gray-800 dark:text-gray-100"></i>
+        <span>Symfony</span>
+      </div>
+      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors flex flex-col items-center gap-3">
+        <i class="devicon-magento-original colored text-4xl"></i>
+        <span>Magento 2</span>
+      </div>
+      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors flex flex-col items-center gap-3">
+        <i class="devicon-git-plain colored text-4xl"></i>
+        <span>Git</span>
+      </div>
+      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors flex flex-col items-center gap-3">
+        <i class="devicon-github-original text-4xl text-gray-800 dark:text-gray-100"></i>
+        <span>GitHub</span>
+      </div>
+      <div class="p-6 bg-white dark:bg-gray-800 shadow rounded-xl transition-colors flex flex-col items-center gap-3">
+        <i class="devicon-bitbucket-original colored text-4xl"></i>
+        <span>Bitbucket</span>
+      </div>
     </div>
   </section>
 
   <!-- CONTACT -->
-  <section id="contact" class="py-20 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100">
+  <section id="contact" class="fade-in py-20 bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100">
     <div class="container mx-auto text-center px-4">
       <h2 id="contact-title" class="text-3xl font-bold mb-6" data-i18n="contact-title"></h2>
       <p id="contact-text" class="mb-6 text-lg dark:text-slate-300" data-i18n="contact-text"></p>
+      <div class="flex justify-center gap-6 mb-6">
+        <a href="mailto:alfonso.pisicchio@gmail.com" aria-label="Send email" class="text-slate-600 dark:text-slate-300 hover:text-emerald-500 transition-colors">
+          <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+        <a href="https://github.com/Forz70043" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" class="text-slate-600 dark:text-slate-300 hover:text-emerald-500 transition-colors">
+          <i class="devicon-github-original text-3xl"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/alfonsopisicchio/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" class="text-slate-600 dark:text-slate-300 hover:text-emerald-500 transition-colors">
+          <i class="devicon-linkedin-plain text-3xl"></i>
+        </a>
+      </div>
       <a id="contact-button" href="mailto:alfonso.pisicchio@gmail.com" data-i18n="contact-button" 
         aria-label="Send email to Alfonso Pisicchio"
         class="px-8 py-3 bg-emerald-500 text-black dark:text-white rounded-xl font-semibold hover:bg-emerald-400 transition-colors">
@@ -198,14 +292,34 @@
 
   <!-- FOOTER -->
   <footer class="bg-gray-900 dark:bg-gray-800 text-gray-400 text-center py-6 transition-colors duration-300">
-    © 2025 Alfonso Pisicchio – Portfolio
+    <div class="flex justify-center gap-5 mb-3">
+      <a href="https://github.com/Forz70043" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="text-gray-400 hover:text-emerald-400 transition-colors">
+        <i class="devicon-github-original text-xl"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/alfonsopisicchio/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="text-gray-400 hover:text-emerald-400 transition-colors">
+        <i class="devicon-linkedin-plain text-xl"></i>
+      </a>
+    </div>
+    © 2026 Alfonso Pisicchio – Portfolio
   </footer>
 
   <!-- SCRIPT -->
   <script src="/libs/js/translations.js"></script>
+  <script src="/libs/js/projects.js"></script>
   <script src="/libs/js/menu.js"></script>
   <script src="/libs/js/lang.js"></script>
   <script src="/libs/js/theme-toggle.js"></script>
   <script src="sw-register.js"></script>
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>

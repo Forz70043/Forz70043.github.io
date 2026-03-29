@@ -1,5 +1,28 @@
-const userLang = navigator.language || navigator.userLanguage;
-const lang = 'en';//userLang.startsWith('it') ? 'it' : 'en';
+const SUPPORTED_LANGS = ['it', 'en', 'fr', 'es'];
+const DEFAULT_LANG = 'en';
+
+function detectLang() {
+  const stored = localStorage.getItem('lang');
+  if (stored && SUPPORTED_LANGS.includes(stored)) return stored;
+  const browserLang = (navigator.language || navigator.userLanguage || '').slice(0, 2).toLowerCase();
+  return SUPPORTED_LANGS.includes(browserLang) ? browserLang : DEFAULT_LANG;
+}
+
+let lang = detectLang();
+
+function setLang(newLang) {
+  if (!SUPPORTED_LANGS.includes(newLang)) return;
+  lang = newLang;
+  localStorage.setItem('lang', lang);
+  document.documentElement.lang = lang;
+  applyTranslations();
+  // Update active state on language selector
+  document.querySelectorAll('[data-lang]').forEach(btn => {
+    btn.classList.toggle('ring-2', btn.dataset.lang === lang);
+    btn.classList.toggle('ring-emerald-400', btn.dataset.lang === lang);
+    btn.classList.toggle('opacity-60', btn.dataset.lang !== lang);
+  });
+}
 
 /**
  * Typewriter effect
@@ -75,3 +98,20 @@ function applyTranslations() {
 }
 
 applyTranslations();
+document.documentElement.lang = lang;
+
+// Show language selector only on localhost (dev mode)
+const isDev = ['localhost', '127.0.0.1', ''].includes(location.hostname);
+if (isDev) {
+  const desktop = document.getElementById('lang-selector-desktop');
+  const mobile = document.getElementById('lang-selector-mobile');
+  if (desktop) desktop.classList.replace('hidden', 'flex');
+  if (mobile) mobile.classList.replace('hidden', 'flex');
+}
+
+document.querySelectorAll('[data-lang]').forEach(btn => {
+  btn.classList.toggle('ring-2', btn.dataset.lang === lang);
+  btn.classList.toggle('ring-emerald-400', btn.dataset.lang === lang);
+  btn.classList.toggle('opacity-60', btn.dataset.lang !== lang);
+  btn.addEventListener('click', () => setLang(btn.dataset.lang));
+});
