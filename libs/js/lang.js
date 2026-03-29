@@ -1,5 +1,5 @@
 const userLang = navigator.language || navigator.userLanguage;
-const lang = 'en';//userLang.startsWith('it') ? 'it' : 'en';
+const lang = userLang.startsWith('it') ? 'it' : 'en';
 
 /**
  * Typewriter effect

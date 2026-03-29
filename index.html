@@ -54,7 +54,7 @@
     }
   </script>
   <!-- Clarity Analytics -->
-  <script src="/libs/js/clarity.js"></script>
+  <!--<script src="/libs/js/clarity.js"></script>-->
 </head>
 <body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white font-sans transition-colors duration-300">
   
@@ -70,6 +70,7 @@
       <!-- MENU LINKS (desktop) -->
       <ul id="menu" class="hidden md:flex space-x-6 items-center">
         <li><a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-about" aria-label="About section"></a></li>
+        <li><a href="#experience" class="hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-experience" aria-label="Experience section"></a></li>
         <li><a href="#projects" class="hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-projects" aria-label="Projects section"></a></li>
         <li><a href="#stack" class="hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-stack" aria-label="Stack section"></a></li>
         <li><a href="#contact" class="hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-contact" aria-label="Contact section"></a></li>
@@ -82,6 +83,7 @@
     <!-- MENU MOBILE -->
     <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 px-6 py-4 space-y-4 shadow">
       <a href="#about" class="block hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-about" aria-label="About section"></a>
+      <a href="#experience" class="block hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-experience" aria-label="Experience section"></a>
       <a href="#projects" class="block hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-projects" aria-label="Projects section"></a>
       <a href="#stack" class="block hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-stack" aria-label="Stack section"></a>
       <a href="#contact" class="block hover:text-blue-600 dark:hover:text-blue-400" data-i18n="menu-contact" aria-label="Contact section"></a>
@@ -130,6 +132,64 @@
   <section id="about" class="fade-in container mx-auto py-20 px-6 bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100 transition-colors duration-300">
     <h2 id="about-title" data-i18n="about-title" class="text-3xl font-bold mb-6"></h2>
     <p id="about-text" data-i18n="about-text" class="max-w-3xl text-lg leading-relaxed"></p>
+  </section>
+
+  <!-- EXPERIENCE TIMELINE -->
+  <section id="experience" class="fade-in bg-gray-100 dark:bg-gray-900 py-20 px-6 transition-colors duration-300">
+    <div class="container mx-auto">
+      <h2 data-i18n="experience-title" class="text-3xl font-bold mb-12"></h2>
+      <div class="relative border-l-2 border-emerald-400 ml-4 md:ml-8">
+
+        <!-- EXP 1 -->
+        <div class="mb-10 ml-8 relative">
+          <span class="absolute -left-[2.55rem] top-1 w-4 h-4 bg-emerald-400 rounded-full border-2 border-white dark:border-gray-900"></span>
+          <span data-i18n="exp1-period" class="text-sm text-emerald-500 font-semibold"></span>
+          <h3 class="text-xl font-bold mt-1">
+            <span data-i18n="exp1-role"></span>
+            <span class="text-gray-500 dark:text-gray-400 font-normal"> — </span>
+            <span data-i18n="exp1-company" class="text-gray-500 dark:text-gray-400 font-normal"></span>
+          </h3>
+          <p data-i18n="exp1-desc" class="mt-2 text-gray-600 dark:text-gray-300 leading-relaxed"></p>
+        </div>
+
+        <!-- EXP 2 -->
+        <div class="mb-10 ml-8 relative">
+          <span class="absolute -left-[2.55rem] top-1 w-4 h-4 bg-emerald-400 rounded-full border-2 border-white dark:border-gray-900"></span>
+          <span data-i18n="exp2-period" class="text-sm text-emerald-500 font-semibold"></span>
+          <h3 class="text-xl font-bold mt-1">
+            <span data-i18n="exp2-role"></span>
+            <span class="text-gray-500 dark:text-gray-400 font-normal"> — </span>
+            <span data-i18n="exp2-company" class="text-gray-500 dark:text-gray-400 font-normal"></span>
+          </h3>
+          <p data-i18n="exp2-desc" class="mt-2 text-gray-600 dark:text-gray-300 leading-relaxed"></p>
+        </div>
+
+        <!-- EXP 3 -->
+        <div class="mb-10 ml-8 relative">
+          <span class="absolute -left-[2.55rem] top-1 w-4 h-4 bg-emerald-400 rounded-full border-2 border-white dark:border-gray-900"></span>
+          <span data-i18n="exp3-period" class="text-sm text-emerald-500 font-semibold"></span>
+          <h3 class="text-xl font-bold mt-1">
+            <span data-i18n="exp3-role"></span>
+            <span class="text-gray-500 dark:text-gray-400 font-normal"> — </span>
+            <span data-i18n="exp3-company" class="text-gray-500 dark:text-gray-400 font-normal"></span>
+          </h3>
+          <p data-i18n="exp3-desc" class="mt-2 text-gray-600 dark:text-gray-300 leading-relaxed"></p>
+        </div>
+
+        <!-- EXP 4 -->
+        <div class="mb-10 ml-8 relative">
+          <span class="absolute -left-[2.55rem] top-1 w-4 h-4 bg-emerald-400 rounded-full border-2 border-white dark:border-gray-900"></span>
+          <span data-i18n="exp4-period" class="text-sm text-emerald-500 font-semibold"></span>
+          <h3 class="text-xl font-bold mt-1">
+            <span data-i18n="exp4-role"></span>
+            <span class="text-gray-500 dark:text-gray-400 font-normal"> — </span>
+            <span data-i18n="exp4-company" class="text-gray-500 dark:text-gray-400 font-normal"></span>
+          </h3>
+          <p data-i18n="exp4-desc" class="mt-2 text-gray-600 dark:text-gray-300 leading-relaxed"></p>
+        </div>
+
+      </div>
+    </div>
   </section>
 
   <!-- PROJECTS -->
